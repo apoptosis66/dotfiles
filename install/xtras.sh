@@ -1,7 +1,9 @@
 yay -S --noconfirm --needed \
-  signal-desktop spotify dropbox-cli zoom \
-  obsidian typora libreoffice obs-studio kdenlive \
-  pinta xournalpp
+  signal-desktop \
+  libreoffice \
+  qbittorrent \
+  keepassxc \
+  veracrypt
 
-# Copy over Omarchy applications
-source ~/.local/share/omarchy/bin/omarchy-sync-applications
+# Copy over Hyperdesk applications
+source ~/workspace/hyperdesk/bin/sync-applications

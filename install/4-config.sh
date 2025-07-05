@@ -1,8 +1,8 @@
-# Copy over Omarchy configs
-cp -R ~/.local/share/omarchy/config/* ~/.config/
+# Copy over Hyperdesk configs
+cp -R ~/workspace/hyperdesk/config/* ~/.config/
 
-# Use default bashrc from Omarchy
-echo "source ~/.local/share/omarchy/default/bash/rc" >~/.bashrc
+# Use default bashrc from Hyperdesk
+echo "source ~/workspace/hyperdesk/default/bash/rc" >~/.bashrc
 
 # Login directly as user, rely on disk encryption + hyprlock for security
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
@@ -21,19 +21,10 @@ git config --global pull.rebase true
 git config --global init.defaultBranch master
 
 # Set identification from install inputs
-if [[ -n "${OMARCHY_USER_NAME//[[:space:]]/}" ]]; then
-  git config --global user.name "$OMARCHY_USER_NAME"
+if [[ -n "${GIT_USER_NAME//[[:space:]]/}" ]]; then
+  git config --global user.name "$GIT_USER_NAME"
 fi
 
-if [[ -n "${OMARCHY_USER_EMAIL//[[:space:]]/}" ]]; then
-  git config --global user.email "$OMARCHY_USER_EMAIL"
+if [[ -n "${GIT_USER_EMAIL//[[:space:]]/}" ]]; then
+  git config --global user.email "$GIT_USER_EMAIL"
 fi
-
-# Set default XCompose that is triggered with CapsLock
-tee ~/.XCompose >/dev/null <<EOF
-include "%H/.local/share/omarchy/default/xcompose"
-
-# Identification
-<Multi_key> <space> <n> : "$OMARCHY_USER_NAME"
-<Multi_key> <space> <e> : "$OMARCHY_USER_EMAIL"
-EOF

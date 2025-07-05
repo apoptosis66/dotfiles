@@ -1,6 +1,6 @@
 yay -S --noconfirm --needed \
-  cargo clang llvm mise \
+  python \
+  jdk-openjdk \
+  visual-studio-code-bin \
   imagemagick \
-  mariadb-libs postgresql-libs \
-  github-cli \
-  lazygit lazydocker
+  google-gemini-cli
