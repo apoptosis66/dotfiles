@@ -12,10 +12,8 @@ for f in ~/workspace/hyperdesk/themes/*; do ln -s "$f" ~/.config/hyperdesk/theme
 
 # Set initial theme
 mkdir -p ~/.config/hyperdesk/current
-ln -snf ~/.config/hyperdesk/themes/tokyo-night ~/.config/hyperdesk/current/theme
-source ~/workspace/hyperdesk/themes/tokyo-night/backgrounds.sh
-ln -snf ~/.config/hyperdesk/backgrounds/tokyo-night ~/.config/hyperdesk/current/backgrounds
-ln -snf ~/.config/hyperdesk/current/backgrounds/1-Pawel-Czerwinski-Abstract-Purple-Blue.jpg ~/.config/hyperdesk/current/background
+ln -snf ~/.config/hyperdesk/themes/catppuccin ~/.config/hyperdesk/current/theme
+ln -snf ~/.config/hyperdesk/current/theme/backgrounds/1-catppuccin.png ~/.config/hyperdesk/current/background
 
 # Set specific app links for current theme
 ln -snf ~/.config/hyperdesk/current/theme/hyprlock.conf ~/.config/hypr/hyprlock.conf
