@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Configure identification
 echo -e "\nEnter identification for git..."
 export GIT_USER_NAME=$(gum input --placeholder "Enter full name" --prompt "Name> ")
