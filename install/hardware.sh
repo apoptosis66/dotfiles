@@ -2,5 +2,5 @@
 
 # Hardware Specific Packages
 yay -S --noconfirm --needed \
-  brother-mfc-12700dw \
+  brother-mfc-l2700dw \
   iscan-plugin-gt-f720
