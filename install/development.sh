@@ -5,4 +5,5 @@ yay -S --noconfirm --needed \
   jdk-openjdk \
   visual-studio-code-bin \
   imagemagick \
-  google-gemini-cli
+  google-gemini-cli \
+  neovim 

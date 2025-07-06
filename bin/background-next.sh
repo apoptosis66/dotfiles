@@ -2,8 +2,8 @@
 
 # Cycles through the background images available
 
-BACKGROUNDS_DIR="$HOME/.config/hyperdesk/current/theme/backgrounds/"
-CURRENT_BACKGROUND_LINK="$HOME/.config/hyperdesk/current/theme/background"
+BACKGROUNDS_DIR="$HOME/.config/theme/backgrounds/"
+CURRENT_BACKGROUND_LINK="$HOME/.config/theme/background"
 
 BACKGROUNDS=($(find "$BACKGROUNDS_DIR" -type f | sort))
 TOTAL=${#BACKGROUNDS[@]}

@@ -36,4 +36,4 @@ tooltip label {
   padding: 2px;
 }
 
-@import "../hyperdesk/current/theme/waybar.css";
+@import "../theme/waybar.css";

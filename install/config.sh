@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Copy over bin files
+cp ../bin/* ~/bin/
+
 # Copy over configs
 cp -r ../config/* ~/.config/
 

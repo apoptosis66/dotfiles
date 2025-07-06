@@ -22,19 +22,19 @@ echo -e "\nInstallation starting..."
 source install/yay.sh
 source install/terminal.sh
 source install/config.sh
+#source install/nvidia.sh
 source install/bluetooth.sh
 source install/printer.sh
 source install/scanner.sh
+source install/power.sh
 source install/desktop.sh
+# source install/mimetypes.sh
 source install/fonts.sh
 source install/hyprlandia.sh
-source install/mimetypes.sh
-source install/nvidia.sh
-source install/get.sh
-source install/nvim.sh
-source install/power.sh
-source install/theme.sh
+source install/git.sh
+source install/development.sh
 source install/xtras.sh
+source install/theme.sh
 
 # Ensure locate is up to date now that everything has been installed
 sudo updatedb

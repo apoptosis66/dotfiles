@@ -1,7 +1,7 @@
 #!/bin/bash
 
-THEMES_DIR="$HOME/.config/hyperdesk/themes/"
-CURRENT_THEME_LINK="$HOME/.config/hyperdesk/current/theme"
+THEMES_DIR="$HOME/.config/themes/"
+CURRENT_THEME_LINK="$HOME/.config/theme"
 
 THEMES=($(find "$THEMES_DIR" -mindepth 1 | sort))
 TOTAL=${#THEMES[@]}
@@ -29,7 +29,7 @@ NEW_THEME=${THEMES[$NEXT_INDEX]}
 NEW_THEME_NAME=$(basename "$NEW_THEME")
 
 # Set current theme
-ln -nsf "$NEW_THEME" "$HOME/.config/hyperdesk/current/theme"
+ln -nsf "$NEW_THEME" "$HOME/.config/theme"
 
 # Touch ghostty config to pickup the changed theme
 touch "$HOME/.config/ghostty/config"
@@ -40,9 +40,9 @@ makoctl reload
 hyprctl reload
 
 # Set new background
-ln -nsf $(find "$HOME/.config/hyperdesk/current/theme/backgrounds/" -type f | head -n 1) "$HOME/.config/hyperdesk/current/theme/background"
+ln -nsf $(find "$HOME/.config/theme/backgrounds/" -type f | head -n 1) "$HOME/.config/theme/background"
 pkill -x swaybg
-setsid swaybg -i "$HOME/.config/hyperdesk/current/theme/background" -m fill &
+setsid swaybg -i "$HOME/.config/theme/background" -m fill &
 
 # Notify of the new theme
 notify-send "Theme changed to $NEW_THEME_NAME" -t 2000
