@@ -4,6 +4,19 @@ yay -Sy --noconfirm --needed ttf-font-awesome noto-fonts noto-fonts-emoji noto-f
 
 mkdir -p ~/.local/share/fonts
 
+if ! fc-list | grep -qi "JetBrainsMonoNL Nerd Font"; then
+  cd /tmp
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
+  unzip JetBrainsMono.zip -d JetBrainsFont
+  cp JetBrainsFont/JetBrainsMonoNLNerdFont-Regular.ttf ~/.local/share/fonts
+  cp JetBrainsFont/JetBrainsMonoNLNerdFont-Bold.ttf ~/.local/share/fonts
+  cp JetBrainsFont/JetBrainsMonoNLNerdFont-Italic.ttf ~/.local/share/fonts
+  cp JetBrainsFont/JetBrainsMonoNLNerdFont-BoldItalic.ttf ~/.local/share/fonts
+  rm -rf JetBrainsMono.zip JetBrainsFont
+  fc-cache
+  cd -
+fi
+
 if ! fc-list | grep -qi "CaskaydiaMono Nerd Font"; then
   cd /tmp
   wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaMono.zip
@@ -17,12 +30,3 @@ if ! fc-list | grep -qi "CaskaydiaMono Nerd Font"; then
   cd -
 fi
 
-if ! fc-list | grep -qi "iA Writer Mono S"; then
-  cd /tmp
-  wget -O iafonts.zip https://github.com/iaolo/iA-Fonts/archive/refs/heads/master.zip
-  unzip iafonts.zip -d iaFonts
-  cp iaFonts/iA-Fonts-master/iA\ Writer\ Mono/Static/iAWriterMonoS-*.ttf ~/.local/share/fonts
-  rm -rf iafonts.zip iaFonts
-  fc-cache
-  cd -
-fi
