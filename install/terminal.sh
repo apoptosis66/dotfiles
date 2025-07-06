@@ -1,7 +1,9 @@
 #!/bin/bash
+
 yay -S --noconfirm --needed \
   wget \
   curl \
+  gum \
   unzip \
   inetutils \
   fd \

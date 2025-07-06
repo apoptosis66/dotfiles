@@ -1,6 +1,0 @@
-source ~/workspace/hyperdesk/default/bash/shell
-source ~/workspace/hyperdesk/default/bash/aliases
-source ~/workspace/hyperdesk/default/bash/functions
-source ~/workspace/hyperdesk/default/bash/prompt
-source ~/workspace/hyperdesk/default/bash/init
-source ~/workspace/hyperdesk/default/bash/envs

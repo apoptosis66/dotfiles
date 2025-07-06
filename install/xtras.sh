@@ -9,6 +9,4 @@ yay -S --noconfirm --needed \
   steam \
   gimp \
   easytag
-
-# Copy over Hyperdesk applications
-source ~/workspace/hyperdesk/bin/sync-applications
+  

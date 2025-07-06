@@ -1,0 +1,92 @@
+######################
+# Shell
+######################
+
+# History control
+shopt -s histappend
+HISTCONTROL=ignoreboth
+HISTSIZE=32768
+HISTFILESIZE="${HISTSIZE}"
+
+# Technicolor dreams
+force_color_prompt=yes
+color_prompt=yes
+
+# Simple prompt with nerd icon
+# https://bash-prompt-generator.org/
+PS1=$'\uf0a9 '
+PS1="[\u@\h \W]$PS1"
+
+
+######################
+# Aliases
+######################
+
+# File system
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
+# Compression
+alias decompress="tar -xzf"
+
+# Find packages without leaving the terminal
+alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
+
+
+######################
+# Functions
+######################
+
+# Open Using Default Application
+open() {
+  xdg-open "$@" >/dev/null 2>&1
+}
+
+# Compression
+compress() { 
+    tar -czf "${1%/}.tar.gz" "${1%/}"; 
+}
+
+# Write iso file to sd card
+iso2sd() {
+  if [ $# -ne 2 ]; then
+    echo "Usage: iso2sd <input_file> <output_device>"
+    echo "Example: iso2sd ~/Downloads/ubuntu-25.04-desktop-amd64.iso /dev/sda"
+    echo -e "\nAvailable SD cards:"
+    lsblk -d -o NAME | grep -E '^sd[a-z]' | awk '{print "/dev/"$1}'
+  else
+    sudo dd bs=4M status=progress oflag=sync if="$1" of="$2"
+    sudo eject $2
+  fi
+}
+
+
+######################
+# Autocompletion
+######################
+
+# source /usr/share/bash-completion/bash_completion
+
+if command -v fzf &> /dev/null; then
+  if [[ -f /usr/share/bash-completion/completions/fzf ]]; then
+    source /usr/share/bash-completion/completions/fzf
+  fi
+  if [[ -f /usr/share/fzf/key-bindings.bash ]]; then
+    source /usr/share/fzf/key-bindings.bash
+  fi
+fi
+
+
+######################
+# Enviroment
+######################
+
+# Complete path
+export PATH="./bin:$HOME/.local/bin:$PATH"
+
+# Editor used by CLI
+export EDITOR="nvim"
+export SUDO_EDITOR="$EDITOR"
