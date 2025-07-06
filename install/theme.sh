@@ -9,8 +9,7 @@ gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
 # Set initial theme
-mkdir -p ~/.config/theme
-ln -snf ~/.config/themes/catppuccin ~/.config/theme
+ln -snf ~/.config/themes/catppuccin/ ~/.config/theme
 ln -snf ~/.config/theme/backgrounds/1-catppuccin.png ~/.config/theme//background
 
 # Set specific app links for current theme
