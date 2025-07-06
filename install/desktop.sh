@@ -1,3 +1,5 @@
+#!/bin/bash
+
 yay -S --noconfirm --needed \
   brightnessctl \
   pavucontrol \

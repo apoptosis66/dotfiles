@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source ~/workspace/hyperdesk/default/bash/functions
 web2app "Google Mail" https://mail.google.com/ https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/gmail.png
 web2app "Google Photos" https://photos.google.com/ https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-photos.png

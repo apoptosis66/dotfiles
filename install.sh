@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install everything
 for f in ~/workspace/hyperdesk/install/*.sh; do source "$f"; done
 

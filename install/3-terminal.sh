@@ -1,3 +1,4 @@
+#!/bin/bash
 yay -S --noconfirm --needed \
   wget \
   curl \

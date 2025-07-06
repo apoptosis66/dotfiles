@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Copy over Hyperdesk configs
 cp -R ~/workspace/hyperdesk/config/* ~/.config/
 
