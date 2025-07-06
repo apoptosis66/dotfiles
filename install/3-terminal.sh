@@ -8,7 +8,6 @@ yay -S --noconfirm --needed \
   eza \
   fzf \
   ripgrep \
-  zoxide \
   bat \
   wl-clipboard \
   fastfetch \

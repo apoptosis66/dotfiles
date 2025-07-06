@@ -16,4 +16,5 @@ yay -S --noconfirm --needed \
   xdg-desktop-portal-gtk
 
 # Start Hyprland on first session
-echo "[[ -z \$DISPLAY && \$(tty) == /dev/tty1 ]] && exec Hyprland" >~/.bash_profile
+# Change back to tty1 if hyprland is main desktop
+echo "[[ -z \$DISPLAY && \$(tty) == /dev/tty2 ]] && exec Hyprland" >~/.bash_profile
