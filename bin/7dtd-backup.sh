@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Source directory
-source_dir="~/.local/share/7DaysToDie/"
+source_dir="$HOME/.local/share/7DaysToDie/"
 source_folder1="Saves"
 source_folder2="LocalPrefabs"
 
 # Backup directory
-backup_dir="~/7dtd/"
+backup_dir="$HOME/7dtd/"
 
 # Check if source directory exists
 if [ ! -d "$source_dir" ]; then
