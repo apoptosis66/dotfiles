@@ -3,7 +3,7 @@
 THEMES_DIR="$HOME/.config/themes/"
 CURRENT_THEME_LINK="$HOME/.config/theme"
 
-THEMES=($(find "$THEMES_DIR" -mindepth 1 | sort))
+THEMES=($(find "$THEMES_DIR" -mindepth 1 -maxdepth 1 -type d | sort))
 TOTAL=${#THEMES[@]}
 
 # Get current theme from symlink
@@ -35,9 +35,10 @@ ln -nsf "$NEW_THEME" "$HOME/.config/theme"
 touch "$HOME/.config/ghostty/config"
 
 # Restart for new theme
-pkill -SIGUSR2 waybar
+pkill waybar
 makoctl reload
 hyprctl reload
+hyprctl dispatch exec waybar
 
 # Set new background
 ln -nsf $(find "$HOME/.config/theme/backgrounds/" -type f | head -n 1) "$HOME/.config/theme/background"

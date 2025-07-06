@@ -34,4 +34,7 @@ ln -nsf "$NEW_BACKGROUND" "$CURRENT_BACKGROUND_LINK"
 
 # Relaunch swaybg
 pkill -x swaybg
-setsid swaybg -i "$NEW_BACKGROUND" -m fill >/dev/null 2>&2 &
+setsid swaybg -i "$NEW_BACKGROUND" -m fill &
+
+# Notify of the new background
+notify-send "Background changed to $NEW_BACKGROUND" -t 2000

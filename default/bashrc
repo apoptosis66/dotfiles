@@ -85,7 +85,7 @@ fi
 ######################
 
 # Complete path
-export PATH="./bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Editor used by CLI
 export EDITOR="nvim"
