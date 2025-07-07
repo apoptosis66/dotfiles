@@ -32,6 +32,7 @@ NEW_THEME_NAME=$(basename "$NEW_THEME")
 ln -nsf "$NEW_THEME" "$HOME/.config/theme"
 
 # Touch ghostty config to pickup the changed theme
+# Note: No Programmic way to reload Ghostty config you must restart to see theme
 touch "$HOME/.config/ghostty/config"
 
 # Restart for new theme
@@ -42,4 +43,4 @@ hyprctl hyprpaper reload , "$HOME/.config/theme/wallpaper.jpg"
 hyprctl dispatch exec waybar
 
 # Notify of the new theme
-notify-send "Theme changed to $NEW_THEME_NAME" -t 2000
+notify-send "Theme changed to $NEW_THEME_NAME" -t 5000
