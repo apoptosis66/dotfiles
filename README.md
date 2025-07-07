@@ -1,8 +1,8 @@
 # Hyperdesk
 
-Turn a fresh Arch installation into a fully-configured, beautiful, and modern web development system based on Hyprland by running a single command. That's the one-line pitch for Hyperdesk. No need to write bespoke configs for every essential tool just to get started or to be up on all the latest command-line tools. Hyperdesk is an opinionated take on what Linux can be at its best.
+Hyperdesk is my personal post Arch installation script to keep all my beautiful ricing in one place. Its was initally a fork of [Omarchy](https://omarchy.org). However, I ended up wanting something simpler and less generic.  Also my taste is applications is much different than his.  I did like his theme switching and install script breakdown.
 
-Hyperdesk is my personal fork of Omarchy [omarchy.org](https://omarchy.org).
+Feel free to fork and make it your own.
 
 ## License
 

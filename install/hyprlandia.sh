@@ -6,12 +6,11 @@ yay -S --noconfirm --needed \
   hyprpicker \
   hyprlock \
   hypridle \
-  hyprpolkitagent \
+  hyprpaper \
   hyprland-qtutils \
   wofi \
   waybar \
   mako \
-  swaybg \
   xdg-desktop-portal-hyprland \
   xdg-desktop-portal-gtk
 

@@ -38,12 +38,8 @@ touch "$HOME/.config/ghostty/config"
 pkill waybar
 makoctl reload
 hyprctl reload
+hyprctl hyprpaper reload , "$HOME/.config/theme/wallpaper.jpg"
 hyprctl dispatch exec waybar
-
-# Set new background
-ln -nsf $(find "$HOME/.config/theme/backgrounds/" -type f | head -n 1) "$HOME/.config/theme/background"
-pkill -x swaybg
-setsid swaybg -i "$HOME/.config/theme/background" -m fill &
 
 # Notify of the new theme
 notify-send "Theme changed to $NEW_THEME_NAME" -t 2000

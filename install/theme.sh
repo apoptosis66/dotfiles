@@ -10,7 +10,6 @@ gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
 # Set initial theme
 ln -snf ~/.config/themes/catppuccin/ ~/.config/theme
-ln -snf ~/.config/theme/backgrounds/1-catppuccin.png ~/.config/theme//background
 
 # Set specific app links for current theme
 ln -snf ~/.config/theme/hyprlock.conf ~/.config/hypr/hyprlock.conf
