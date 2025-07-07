@@ -10,8 +10,8 @@
       "clock"
     ],
     "modules-right": [
+      "tray",
       "bluetooth",
-      "network",
       "pulseaudio",
       "cpu",
       "power-profiles-daemon"
@@ -67,16 +67,16 @@
       "format-disabled": "󰂲",
       "format-connected": "",
       "tooltip-format": "Devices connected: {num_connections}",
-      "on-click": "GTK_THEME=Adwaita-dark blueberry"
+      "on-click": "GTK_THEME=Adwaita-dark blueman"
     },
     "pulseaudio": {
-      "format": "",
-      "format-muted": "󰝟",
+      "format": "{icon}  {volume}%",
+      "format-muted": "",
+      "format-icons": {
+          "default": ["", "", " "]
+      },
       "scroll-step": 5,
-      "on-click": "GTK_THEME=Adwaita-dark pavucontrol",
-      "tooltip-format": "Playing at {volume}%",
-      "on-click-right": "pamixer -t",
-      "ignored-sinks": ["Easy Effects Sink"]
+      "on-click": "GTK_THEME=Adwaita-dark pavucontrol"
     },
     "power-profiles-daemon": {
       "format": "{icon}",

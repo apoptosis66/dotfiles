@@ -12,7 +12,6 @@ gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 ln -snf ~/.config/themes/catppuccin/ ~/.config/theme
 
 # Set specific app links for current theme
-ln -snf ~/.config/theme/hyprlock.conf ~/.config/hypr/hyprlock.conf
 ln -snf ~/.config/theme/wofi.css ~/.config/wofi/style.css
 ln -snf ~/.config/theme/neovim.lua ~/.config/nvim/lua/plugins/theme.lua
 mkdir -p ~/.config/btop/themes

@@ -22,11 +22,12 @@ echo -e "\nInstallation starting..."
 source install/yay.sh
 source install/terminal.sh
 source install/config.sh
-#source install/nvidia.sh
+source install/nvidia.sh
+source install/network.sh
+source install/power.sh
 source install/bluetooth.sh
 source install/printer.sh
 source install/scanner.sh
-source install/power.sh
 source install/desktop.sh
 # source install/mimetypes.sh
 source install/fonts.sh
