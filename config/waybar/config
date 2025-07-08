@@ -10,6 +10,7 @@
     "clock"
   ],
   "modules-right": [
+    "tray",
     "cpu",
     "network",
     "pulseaudio"
@@ -40,6 +41,7 @@
   },
   "clock": {
     "format": "{:%Y-%m-%d %I:%M %p}",
+    "on-click": "firefox --new-window 'https://calendar.google.com'",
     "tooltip": false
   },
   "cpu": {
@@ -84,7 +86,9 @@
       "performance":  "󰡴"
     }
   },
-	"tray": {
-		"icon-size": 20
-	}
+  "tray": {
+    "icon-size": 16,
+    "spacing": 5,
+    "show-passive-items": true
+  }
 }
