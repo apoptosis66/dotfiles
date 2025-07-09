@@ -10,9 +10,8 @@
     "clock"
   ],
   "modules-right": [
-    "tray",
     "cpu",
-    "network",
+    "custom/network-manager",
     "pulseaudio"
   ],
   "hyprland/workspaces": {
@@ -76,19 +75,17 @@
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "GTK_THEME=Adwaita-dark blueman"
   },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}",
-    "tooltip": true,
-    "format-icons": {
-      "power-saver": "󰡳",
-      "balanced":     "󰊚",
-      "performance":  "󰡴"
-    }
-  },
   "tray": {
     "icon-size": 16,
     "spacing": 5,
     "show-passive-items": true
+  },
+  "custom/network-manager": {
+      "format": "{text}",
+      "interval": 5,
+      "return-type": "json",
+      "exec": "~/.config/waybar/nm-ui.sh status",
+      "on-click": "~/.config/waybar/nm-ui.sh menu",
+      "tooltip": true
   }
 }
