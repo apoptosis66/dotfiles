@@ -1,6 +1,7 @@
-@define-color	selected-text  #88C0D0;
-@define-color	text  #D8DEE9;
-@define-color	base  #2E3440;
+@define-color border #D8DEE9;
+@define-color	text #D8DEE9;
+@define-color	base #2E3440;
+@define-color	selected-text #4c566a;
 
 * {
   font-family: 'JetBrainsMonoNL Nerd Font', monospace;
@@ -9,43 +10,35 @@
 
 window {
   margin: 0px;
-  padding: 20px;
+  border: 2px solid @border;
   background-color: @base;
-  opacity: 0.95;
+}
+
+#input {
+  margin: 5px;
+  border: 1px solid @base;
+  color: @text;
+  background-color: @base;
+}
+
+#input image {
+	color: @text;
 }
 
 #inner-box {
-  margin: 0;
-  padding: 0;
+  margin: 5px;
   border: none;
   background-color: @base;
 }
 
 #outer-box {
-  margin: 0;
-  padding: 20px;
+  margin: 5px;
   border: none;
   background-color: @base;
 }
 
 #scroll {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: @base;
-}
-
-#input {
-  margin: 0;
-  padding: 10px;
-  border: none;
-  background-color: @base;
-  color: @text;
-}
-
-#input:focus {
-  outline: none;
-  box-shadow: none;
+  margin: 0px;
   border: none;
 }
 
@@ -53,19 +46,14 @@ window {
   margin: 5px;
   border: none;
   color: @text;
-}
-
-#entry {
-  background-color: @base;
-}
+} 
 
 #entry:selected {
-  outline: none;
-  border: none;
+	background-color: @selected-text;
 }
 
-#entry:selected #text {
-  color: @selected-text;
+#text:selected {
+	background-color: @selected-text;
 }
 
 #entry image {
