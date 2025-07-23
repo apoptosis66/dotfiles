@@ -1,0 +1,48 @@
+Saving in: /home/apoptosis/Pictures/2025-07-22-204139_hyprshot.png
+jq: parse error: Invalid numeric literal at line 1, column 584
+jq: error: syntax error, unexpected ')' at <top-level>, line 1, column 40:
+    [.[] | select(.workspace.id | contains())]
+                                           ^
+jq: 1 compile error
+Monitors: [{
+    "id": 0,
+    "name": "DP-3",
+    "description": "Dell Inc. Dell AW3423DW #tBwzGDAYARAZ",
+    "make": "Dell Inc.",
+    "model": "Dell AW3423DW",
+    "serial": "#tBwzGDAYARAZ",
+    "width": 3440,
+    "height": 1440,
+    "refreshRate": 59.97300,
+    "x": 0,
+    "y": 0,
+    "activeWorkspace": {
+        "id": 2,
+        "name": "2"
+    },
+    "specialWorkspace": {
+        "id": 0,
+        "name": ""
+    },
+    "reserved": [0, 26, 0, 0],
+    "scale": 1.00,
+    "transform": 0,
+    "focused": true,
+    "dpmsStatus": true,
+    "vrr": false,
+    "solitary": "0",
+    "activelyTearing": false,
+    "directScanoutTo": "0",
+    "disabled": false,
+    "currentFormat": "XRGB8888",
+    "mirrorOf": "none",
+    "availableModes": ["3440x1440@59.97Hz","3440x1440@174.96Hz","3440x1440@143.97Hz","3440x1440@119.99Hz","3440x1440@99.98Hz","1024x768@60.00Hz","800x600@60.32Hz","640x480@59.94Hz"]
+}]
+Clients: 
+Boxes:
+
+invalid box format: 
+
+Geometry: 
+Crop: , x
+supplied geometry did not intersect with any outputs
