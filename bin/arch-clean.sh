@@ -5,9 +5,6 @@
 # Update Arch Mirrors
 reflector --verbose -c US --protocol https --sort rate --latest 25 --save /etc/pacman.d/mirrorlist
 
-# Update Endeavour OS Mirrors
-eos-rankmirrors --verbose
-
 # Update System
 yay -Syyu
 
