@@ -2,7 +2,6 @@
 
 yay -S --noconfirm --needed \
   hyprland \
-  hyprshot \
   hyprpicker \
   hyprlock \
   hypridle \
@@ -11,6 +10,9 @@ yay -S --noconfirm --needed \
   wofi \
   waybar \
   mako \
+  grim \
+  jq \
+  slurp \
   xdg-desktop-portal-hyprland \
   xdg-desktop-portal-gtk
 
