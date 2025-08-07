@@ -12,6 +12,7 @@ cp -r ../nvim ~/.config/
 cp -r ../waybar ~/.config/
 cp -r ../wofi ~/.config/
 cp -r ../themes ~/.config/
+cp -r ../wallust ~/.config/
 
 
 # Backup default bashrc
