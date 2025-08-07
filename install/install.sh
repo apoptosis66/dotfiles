@@ -19,23 +19,23 @@ echo -e "\n$ascii_art\n"
 echo -e "\nInstallation starting..."
 
 # Install everything. Seperate files for easy comment out. Order matters.
-source install/yay.sh
-source install/terminal.sh
-source install/config.sh
-source install/nvidia.sh
-source install/network.sh
-source install/power.sh
-source install/bluetooth.sh
-source install/printer.sh
-source install/scanner.sh
-source install/desktop.sh
-# source install/mimetypes.sh
-source install/fonts.sh
-source install/hyprlandia.sh
-source install/git.sh
-source install/development.sh
-source install/xtras.sh
-source install/theme.sh
+source yay.sh
+source terminal.sh
+source config.sh
+source nvidia.sh
+source network.sh
+source power.sh
+source bluetooth.sh
+source printer.sh
+source scanner.sh
+source desktop.sh
+# source mimetypes.sh
+source fonts.sh
+source hyprlandia.sh
+source git.sh
+source development.sh
+source xtras.sh
+source theme.sh
 
 # Ensure locate is up to date now that everything has been installed
 sudo updatedb
