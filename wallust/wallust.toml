@@ -43,14 +43,14 @@ check_contrast = true
 # template: A RELATIVE path that points to `~/.config/wallust/template` (depends on platform)
 # target: ABSOLUTE path in which to place a file with generated templated values.
 # ¡ If either one is a directory, then both SHOULD be one. !
-# zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
-text = { src = 'colors.txt', dst = '~/.config/wallust/colors.txt' }
-
-hypr = { src = 'hyprland.conf', dst = '~/.config/hypr/colors.conf' }
-
+#zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
+#hypr = { src = 'hyprland.conf', dst = '~/.config/hypr/colors.conf' }
 #waybar = { src = 'waybar.css', dst = '~/.config/waybar/colors.css' }
 #wofi = { src = 'wofi.css', dst = '~/.config/wofi/colors.css' }
 #gtk3 = { src = 'gtk.css', dst = '~/.config/gtk-3.0/colors.css' }
 #gtk4 = { src = 'gtk.css', dst = '~/.config/gtk-4.0/colors.css' }
 #vscode = { src = 'vscode.json', dst = '~/.cache/wallust/colors.json' }
 #vscode2 = { src = 'vscode', dst = '~/.cache/wallust/colors' }
+css = { src = 'colors.css', dst = '~/.config/wallust/output/colors.css' }
+
+text = { src = 'colors.txt', dst = '~/.config/wallust/output/colors.txt' }

@@ -83,8 +83,8 @@
   },
   "custom/arch": {
     "format": " 󰣇 ",
-    "tooltip": false,
-    "on-click": "wofi --show drun --sort-order=alphabetical",
+    "tooltip-format": "Arch BTW",
+    "on-click": "~/bin/theme-menu.sh",
     "on-click-right": ""
   },
   "custom/network-manager": {
