@@ -1,0 +1,53 @@
+@import ".config/theme/colors.css";
+
+* {
+  font-family: 'JetBrainsMonoNL Nerd Font', monospace;
+  font-size: 18px;
+  color: @foreground;
+}
+
+window {
+  margin: 0px;
+  border: 2px solid @color12;
+  background-color: @background;
+}
+
+#input {
+  margin: 5px;
+  border: 1px solid @background;
+  background-color: @background;
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+  background-color: @background;
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+  background-color: @background;
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+} 
+
+#entry:selected {
+	background-color: @color8;
+}
+
+#text:selected {
+	background-color: @color8;
+}
+
+#entry image {
+  -gtk-icon-transform: scale(0.7);
+}
