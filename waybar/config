@@ -82,9 +82,9 @@
     "show-passive-items": true
   },
   "custom/arch": {
-    "format": "󰣇 btw",
+    "format": " 󰣇 ",
     "tooltip": false,
-    "on-click": "ghostty",
+    "on-click": "wofi --show drun --sort-order=alphabetical",
     "on-click-right": ""
   },
   "custom/network-manager": {
