@@ -2,20 +2,33 @@
 
 # https://forum.endeavouros.com/t/a-complete-idiots-guide-to-endeavour-os-maintenance-update-upgrade/25184/180
 
+# Check systemd failed services
+systemctl --failed
+
+# Log files check
+sudo journalctl -p 3 -xb
+
 # Update Arch Mirrors
 reflector --verbose -c US --protocol https --sort rate --latest 25 --save /etc/pacman.d/mirrorlist
 
 # Update System
 yay -Syyu
 
-# Clean Journal
-journalctl --vacuum-time=4weeks
+ #Delete Pacman Cache
+sudo pacman -Scc
 
-# Clean Cache (Uninstalled Packages)
-#paccache -ruk0
-#paccache -rk1
-yay -Sc
+# Delete Yay Cache
+yay -Scc
+
+# Delete unwanted dependencies
+yay -Yc
 
 # Remove Orphans
-yay -Yc
-pacman -Rns $(pacman -Qdtq)
+sudo pacman -Rns $(pacman -Qdtq)
+
+# Clean the Cache
+rm -rf .cache/*
+
+# Clean the Journal
+sudo journalctl --vacuum-time=2weeks
+
