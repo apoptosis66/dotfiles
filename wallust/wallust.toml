@@ -44,7 +44,6 @@ check_contrast = true
 # target: ABSOLUTE path in which to place a file with generated templated values.
 # ¡ If either one is a directory, then both SHOULD be one. !
 #zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
-#hypr = { src = 'hyprland.conf', dst = '~/.config/hypr/colors.conf' }
 #waybar = { src = 'waybar.css', dst = '~/.config/waybar/colors.css' }
 #wofi = { src = 'wofi.css', dst = '~/.config/wofi/colors.css' }
 #gtk3 = { src = 'gtk.css', dst = '~/.config/gtk-3.0/colors.css' }
@@ -52,5 +51,7 @@ check_contrast = true
 #vscode = { src = 'vscode.json', dst = '~/.cache/wallust/colors.json' }
 #vscode2 = { src = 'vscode', dst = '~/.cache/wallust/colors' }
 css = { src = 'colors.css', dst = '~/.config/wallust/output/colors.css' }
+
+conf = { src = 'colors.conf', dst = '~/.config/wallust/output/colors.conf' }
 
 text = { src = 'colors.txt', dst = '~/.config/wallust/output/colors.txt' }
