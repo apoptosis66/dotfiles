@@ -5,6 +5,8 @@
         "font_family": "JetBrainsMonoNL Nerd Font Mono",
         "font_size": "14",
         "ghostty_theme": "Everforest Dark - Hard",
+        "nvim_theme": "neanias/everforest-nvim",
+        "nvim_colorscheme": "everforest",
         "background": "#1E2326",
         "foreground": "#D3C6AA",
         "cursor": "#E69875",
@@ -30,10 +32,6 @@
             "src": "hypr.j2",
             "out": "output/hypr.conf"
         },
-        "ghostty": {
-            "src": "ghostty.j2",
-            "out": "output/ghostty.conf"
-        },
         "mako": {
             "src": "mako.j2",
             "out": "output/mako.conf"
@@ -45,6 +43,14 @@
         "wofi": {
             "src": "wofi.j2",
             "out": "output/wofi.css"
+        },
+        "ghostty": {
+            "src": "ghostty.j2",
+            "out": "output/ghostty.conf"
+        },
+        "nvim": {
+            "src": "nvim.j2",
+            "out": "output/nvim.lua"
         }
     }
 }
