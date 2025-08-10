@@ -16,8 +16,9 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
-themes_path = Path.home() / Path(".config/themes2")
-templates_path = themes_path / Path("templates")
+config_path = Path.home() / Path(".config/themes2")
+themes_path = config_path / Path("themes")
+templates_path = config_path / Path("templates")
 
 
 def strip_filter(text):

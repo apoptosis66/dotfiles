@@ -1,5 +1,10 @@
 {
     "theme": {
+        "name": "dracula",
+        "wallpaper": "~/.config/wallpaper/galactus.jpg",
+        "font_family": "JetBrainsMonoNL Nerd Font Mono",
+        "font_size": "14",
+        "ghostty_theme": "Dracula",
         "background": "#1E1F29",
         "foreground": "#E6E6E6",
         "cursor": "#BBBBBB",
@@ -21,13 +26,25 @@
         "color15": "#FFFFFF"
     },
     "templates": {
-        "css": {
-            "src": "css.j2",
-            "out": "output/theme.css"
-        },
         "hypr": {
             "src": "hypr.j2",
-            "out": "output/theme.conf"
+            "out": "output/hypr.conf"
+        },
+        "ghostty": {
+            "src": "ghostty.j2",
+            "out": "output/ghostty.conf"
+        },
+        "mako": {
+            "src": "mako.j2",
+            "out": "output/mako.conf"
+        },
+        "waybar": {
+            "src": "waybar.j2",
+            "out": "output/waybar.css"
+        },
+        "wofi": {
+            "src": "wofi.j2",
+            "out": "output/wofi.css"
         }
     }
 }
