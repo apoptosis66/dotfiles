@@ -1,0 +1,33 @@
+{
+    "theme": {
+        "background": "#1E1F29",
+        "foreground": "#E6E6E6",
+        "cursor": "#BBBBBB",
+        "color0": "#000000",
+        "color1": "#FF5555",
+        "color2": "#50FA7B",
+        "color3": "#F1FA8C",
+        "color4": "#BD93F9",
+        "color5": "#FF79C6",
+        "color6": "#8BE9FD",
+        "color7": "#BBBBBB",
+        "color8": "#555555",
+        "color9": "#FF5555",
+        "color10": "#50FA7B",
+        "color11": "#F1FA8C",
+        "color12": "#BD93F9",
+        "color13": "#FF79C6",
+        "color14": "#8BE9FD",
+        "color15": "#FFFFFF"
+    },
+    "templates": {
+        "css": {
+            "src": "css.j2",
+            "out": "output/theme.css"
+        },
+        "hypr": {
+            "src": "hypr.j2",
+            "out": "output/theme.conf"
+        }
+    }
+}
