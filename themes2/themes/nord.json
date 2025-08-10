@@ -1,57 +1,29 @@
 {
-    "theme": {
-        "name": "nord",
-        "wallpaper": "~/.config/wallpaper/nord.jpg",
-        "font_family": "JetBrainsMonoNL Nerd Font Mono",
-        "font_size": "14",
-        "ghostty_theme": "nord",
-        "nvim_theme": "EdenEast/nightfox.nvim",
-        "nvim_colorscheme": "nightfox",
-        "background": "#2E3440",
-        "foreground": "#D8DEE9",
-        "cursor": "#ECEFF4",
-        "color0": "#3B4252",
-        "color1": "#BF616A",
-        "color2": "#A3BE8C",
-        "color3": "#EBCB8B",
-        "color4": "#81A1C1",
-        "color5": "#B48EAD",
-        "color6": "#88C0D0",
-        "color7": "#E5E9F0",
-        "color8": "#4C566A",
-        "color9": "#BF616A",
-        "color10": "#A3BE8C",
-        "color11": "#EBCB8B",
-        "color12": "#81A1C1",
-        "color13": "#B48EAD",
-        "color14": "#8FBCBB",
-        "color15": "#ECEFF4"
-    },
-    "templates": {
-        "hypr": {
-            "src": "hypr.j2",
-            "out": "output/hypr.conf"
-        },
-        "mako": {
-            "src": "mako.j2",
-            "out": "output/mako.conf"
-        },
-        "waybar": {
-            "src": "waybar.j2",
-            "out": "output/waybar.css"
-        },
-        "wofi": {
-            "src": "wofi.j2",
-            "out": "output/wofi.css"
-        },
-        "ghostty": {
-            "src": "ghostty.j2",
-            "out": "output/ghostty.conf"
-        },
-        "nvim": {
-            "src": "nvim.j2",
-            "out": "output/nvim.lua"
-        }
-    }
+    "theme": "nord",
+    "wallpaper": "~/.config/wallpaper/nord.jpg",
+    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "font_size": "14",
+    "ghostty_theme": "nord",
+    "nvim_theme": "EdenEast/nightfox.nvim",
+    "nvim_colorscheme": "nightfox",
+    "background": "#2E3440",
+    "foreground": "#D8DEE9",
+    "cursor": "#ECEFF4",
+    "color0": "#3B4252",
+    "color1": "#BF616A",
+    "color2": "#A3BE8C",
+    "color3": "#EBCB8B",
+    "color4": "#81A1C1",
+    "color5": "#B48EAD",
+    "color6": "#88C0D0",
+    "color7": "#E5E9F0",
+    "color8": "#4C566A",
+    "color9": "#BF616A",
+    "color10": "#A3BE8C",
+    "color11": "#EBCB8B",
+    "color12": "#81A1C1",
+    "color13": "#B48EAD",
+    "color14": "#8FBCBB",
+    "color15": "#ECEFF4"
 }
 

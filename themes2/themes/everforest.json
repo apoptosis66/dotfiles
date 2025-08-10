@@ -1,57 +1,29 @@
 {
-    "theme": {
-        "name": "everforest",
-        "wallpaper": "~/.config/wallpaper/everforest.jpg",
-        "font_family": "JetBrainsMonoNL Nerd Font Mono",
-        "font_size": "14",
-        "ghostty_theme": "Everforest Dark - Hard",
-        "nvim_theme": "neanias/everforest-nvim",
-        "nvim_colorscheme": "everforest",
-        "background": "#1E2326",
-        "foreground": "#D3C6AA",
-        "cursor": "#E69875",
-        "color0": "#7A8478",
-        "color1": "#E67E80",
-        "color2": "#A7C080",
-        "color3": "#DBBC7F",
-        "color4": "#7FBBB3",
-        "color5": "#D699B6",
-        "color6": "#83C092",
-        "color7": "#F2EFDF",
-        "color8": "#A6B0A0",
-        "color9": "#F85552",
-        "color10": "#8DA101",
-        "color11": "#DFA000",
-        "color12": "#3A94C5",
-        "color13": "#DF69BA",
-        "color14": "#35A77C",
-        "color15": "#FFFBEF"
-    },
-    "templates": {
-        "hypr": {
-            "src": "hypr.j2",
-            "out": "output/hypr.conf"
-        },
-        "mako": {
-            "src": "mako.j2",
-            "out": "output/mako.conf"
-        },
-        "waybar": {
-            "src": "waybar.j2",
-            "out": "output/waybar.css"
-        },
-        "wofi": {
-            "src": "wofi.j2",
-            "out": "output/wofi.css"
-        },
-        "ghostty": {
-            "src": "ghostty.j2",
-            "out": "output/ghostty.conf"
-        },
-        "nvim": {
-            "src": "nvim.j2",
-            "out": "output/nvim.lua"
-        }
-    }
+    "theme": "everforest",
+    "wallpaper": "~/.config/wallpaper/everforest.jpg",
+    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "font_size": "14",
+    "ghostty_theme": "Everforest Dark - Hard",
+    "nvim_theme": "neanias/everforest-nvim",
+    "nvim_colorscheme": "everforest",
+    "background": "#1E2326",
+    "foreground": "#D3C6AA",
+    "cursor": "#E69875",
+    "color0": "#7A8478",
+    "color1": "#E67E80",
+    "color2": "#A7C080",
+    "color3": "#DBBC7F",
+    "color4": "#7FBBB3",
+    "color5": "#D699B6",
+    "color6": "#83C092",
+    "color7": "#F2EFDF",
+    "color8": "#A6B0A0",
+    "color9": "#F85552",
+    "color10": "#8DA101",
+    "color11": "#DFA000",
+    "color12": "#3A94C5",
+    "color13": "#DF69BA",
+    "color14": "#35A77C",
+    "color15": "#FFFBEF"
 }
 
