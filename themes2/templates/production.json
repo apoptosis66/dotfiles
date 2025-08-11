@@ -1,4 +1,8 @@
 {
+    "waybar": {
+        "src": "waybar.j2",
+        "out": "~/.config/waybar/theme.css"
+    },
     "wofi": {
         "src": "wofi.j2",
         "out": "~/.config/wofi/theme.css"
