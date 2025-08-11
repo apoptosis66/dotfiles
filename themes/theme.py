@@ -17,6 +17,8 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 VERBOSE = False
+DEFAULT_CONFIG = "testing"
+CURRENT_ICON = "\uf0a9"
 
 config_path = Path.home() / Path(".config/themes")
 themes_path = config_path / Path("themes")
@@ -52,11 +54,24 @@ def list_themes(config_name):
         return
 
     try:
+        themes = []
+
+        # Get Current Theme
+        with open(config_file_path, "r") as f:
+            config_data = json.load(f)
+            current_theme = config_data.get("current_theme")
+            themes.append(f"{CURRENT_ICON} {current_theme}")
+
         # Use glob to find all files with a .json extension
         json_files = list(themes_path.glob("*.json"))
         if json_files:
             for file in json_files:
-                print(f"{file.stem}")
+                theme = file.stem
+                if theme != current_theme:
+                    themes.append(theme)
+
+        for theme in themes:
+            print(theme)
 
     except OSError as e:
         print(f"An error occurred while accessing the path: {e}")
@@ -154,14 +169,22 @@ def main():
 
     list_parser = subparsers.add_parser("list", help="List all available themes.")
     list_parser.add_argument(
-        "-c", "--config", dest="config_name", default="testing", help="Specify a config json to use with the theme."
+        "-c",
+        "--config",
+        dest="config_name",
+        default=DEFAULT_CONFIG,
+        help="Specify a config json to use with the theme.",
     )
     list_parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output.")
 
     theme_parser = subparsers.add_parser("theme", help="Apply a theme with optional settings.")
     theme_parser.add_argument("theme_name", help="The name of the theme to apply.")
     theme_parser.add_argument(
-        "-c", "--config", dest="config_name", default="testing", help="Specify a config json to use with the theme."
+        "-c",
+        "--config",
+        dest="config_name",
+        default=DEFAULT_CONFIG,
+        help="Specify a config json to use with the theme.",
     )
     theme_parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output.")
 
