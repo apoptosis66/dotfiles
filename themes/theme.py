@@ -17,7 +17,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 VERBOSE = False
-DEFAULT_CONFIG = "testing"
+DEFAULT_CONFIG = "production"
 CURRENT_ICON = "\uf0a9"
 
 config_path = Path.home() / Path(".config/themes")
@@ -60,7 +60,7 @@ def list_themes(config_name):
         with open(config_file_path, "r") as f:
             config_data = json.load(f)
             current_theme = config_data.get("current_theme")
-            themes.append(f"{CURRENT_ICON} {current_theme}")
+            themes.append(f"{CURRENT_ICON}  {current_theme}")
 
         # Use glob to find all files with a .json extension
         json_files = list(themes_path.glob("*.json"))
@@ -77,7 +77,7 @@ def list_themes(config_name):
         print(f"An error occurred while accessing the path: {e}")
 
 
-def apply_theme(theme_name, config_name):
+def apply_theme(theme_name, config_name, show_wallpaper):
     """
     Renders Jinja2 templates from a specified theme directory.
 
@@ -101,12 +101,17 @@ def apply_theme(theme_name, config_name):
         # Load the configuration json files
         with open(theme_file_path, "r") as f:
             theme_data = json.load(f)
+            wallpaper = theme_data.get("wallpaper")
 
         with open(config_file_path, "r") as f:
             config_data = json.load(f)
             current_theme = config_data.get("current_theme")
             templates_data = config_data.get("templates")
             vprint(f"Current theme: {current_theme}")
+
+        if current_theme == theme_name:
+            vprint(f"Current Theme {current_theme} is already active.")
+            return
 
         if not templates_data:
             vprint("No templates found in the configuration file.")
@@ -155,6 +160,10 @@ def apply_theme(theme_name, config_name):
             json.dump(config_data, f, indent=4)
         vprint(f"New theme: {theme_name}")
 
+        # Wallpaper Output
+        if show_wallpaper:
+            print(wallpaper)
+
     except FileNotFoundError:
         print(f"Error: The file '{theme_file_path}' was not found.")
     except json.JSONDecodeError:
@@ -186,6 +195,7 @@ def main():
         default=DEFAULT_CONFIG,
         help="Specify a config json to use with the theme.",
     )
+    theme_parser.add_argument("-w", "--wallpaper", action="store_true", help="Enable wallpaper output.")
     theme_parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output.")
 
     # No Args
@@ -199,7 +209,7 @@ def main():
     if args.command == "list":
         list_themes(args.config_name)
     elif args.command == "theme":
-        apply_theme(args.theme_name, args.config_name)
+        apply_theme(args.theme_name, args.config_name, args.wallpaper)
     else:
         parser.print_help(sys.stderr)
         sys.exit(1)
