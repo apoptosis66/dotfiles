@@ -1,6 +1,10 @@
 {
     "current_theme": "catppuccin",
     "templates": {
+        "text": {
+            "src": "text.j2",
+            "out": "testing/theme.txt"
+        },
         "css": {
             "src": "css.j2",
             "out": "testing/theme.css"
