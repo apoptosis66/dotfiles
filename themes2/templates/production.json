@@ -1,4 +1,8 @@
 {
+    "wofi": {
+        "src": "wofi.j2",
+        "out": "~/.config/wofi/theme.css"
+    },
     "ghostty": {
         "src": "ghostty.j2",
         "out": "~/.config/ghostty/theme.conf"

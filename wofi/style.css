@@ -1,33 +1,33 @@
-@import ".config/theme/colors.css";
+@import ".config/wofi/theme.css";
 
 * {
   font-family: JetBrainsMonoNL Nerd Font Mono;
   font-size: 18px;
-  color: @foreground;
+  color: @text_color;
 }
 
 window {
   margin: 0px;
-  border: 2px solid @color12;
-  background-color: @background;
+  border: 2px solid @window_border_color;
+  background-color: @bacground_color;
 }
 
 #input {
   margin: 5px;
-  border: 1px solid @background;
-  background-color: @background;
+  border: 1px solid @bacground_color;
+  background-color: @bacground_color;
 }
 
 #inner-box {
   margin: 5px;
   border: none;
-  background-color: @background;
+  background-color: @bacground_color;
 }
 
 #outer-box {
   margin: 5px;
   border: none;
-  background-color: @background;
+  background-color: @bacground_color;
 }
 
 #scroll {
@@ -41,11 +41,11 @@ window {
 } 
 
 #entry:selected {
-	background-color: @color8;
+	background-color: @selected_bg_color;
 }
 
 #text:selected {
-	background-color: @color8;
+	background-color: @selected_bg_color;
 }
 
 #entry image {
