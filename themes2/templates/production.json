@@ -1,4 +1,8 @@
 {
+    "hypr": {
+        "src": "hypr.j2",
+        "out": "~/.config/hypr/theme.conf"
+    },
     "mako": {
         "src": "mako.j2",
         "out": "~/.config/mako/config"
