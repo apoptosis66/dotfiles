@@ -1,6 +1,4 @@
-config-file = ~/.config/theme/ghostty.theme
-font-family = JetBrainsMonoNL Nerd Font Mono
-font-size = 14
+config-file = theme.conf
 background-opacity = 0.95
 # window-decoration = false
 # gtk-titlebar = false

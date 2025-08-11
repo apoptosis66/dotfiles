@@ -1,4 +1,8 @@
 {
+    "ghostty": {
+        "src": "ghostty.j2",
+        "out": "~/.config/ghostty/theme.conf"
+    },
     "nvim": {
         "src": "nvim.j2",
         "out": "~/.config/nvim/lua/plugins/theme.lua"
