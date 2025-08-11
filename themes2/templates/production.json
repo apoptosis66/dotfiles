@@ -1,4 +1,8 @@
 {
+    "nvim": {
+        "src": "nvim.j2",
+        "out": "~/.config/nvim/lua/plugins/theme.lua"
+    },
     "btop": {
         "src": "btop.j2",
         "out": "~/.config/btop/themes/current.theme"
