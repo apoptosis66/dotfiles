@@ -1,4 +1,8 @@
 {
+    "mako": {
+        "src": "mako.j2",
+        "out": "~/.config/mako/config"
+    },
     "waybar": {
         "src": "waybar.j2",
         "out": "~/.config/waybar/theme.css"
