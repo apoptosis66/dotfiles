@@ -3,6 +3,10 @@
         "src": "hypr.j2",
         "out": "~/.config/hypr/theme.conf"
     },
+    "hyprpaper": {
+        "src": "hyprpaper.j2",
+        "out": "~/.config/hypr//hyprpaper.conf"
+    },
     "mako": {
         "src": "mako.j2",
         "out": "~/.config/mako/config"
