@@ -103,7 +103,7 @@ def apply_theme(theme_name, config_name):
         # Register custom filters
         env.filters["strip"] = strip_filter
 
-        vprint(f"--- Rendering '{config_name}' templates for theme '{theme_name}'... ---")
+        vprint(f"Rendering '{config_name}' templates for theme '{theme_name}'...")
         for template_name, paths in templates_data.items():
             src_path = paths.get("src")
             out_path = paths.get("out")
@@ -134,7 +134,11 @@ def apply_theme(theme_name, config_name):
             except Exception as e:
                 vprint(f"Error rendering template '{src_path}': {e}")
 
-        vprint("--- Done. ---")
+        # Write new current theme
+        config_data["current_theme"] = theme_name
+        with open(config_file_path, "w") as f:
+            json.dump(config_data, f, indent=4)
+        vprint(f"New theme: {theme_name}")
 
     except FileNotFoundError:
         print(f"Error: The file '{theme_file_path}' was not found.")
