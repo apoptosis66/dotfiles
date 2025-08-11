@@ -67,14 +67,14 @@
         "default": ["", "", " "]
     },
     "scroll-step": 5,
-    "on-click": "GTK_THEME=Adwaita-dark pavucontrol"
+    "on-click": "ghostty -e wiremix"
   },
   "bluetooth": {
     "format": "",
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "GTK_THEME=Adwaita-dark blueman"
+    "on-click": "blueberry"
   },
   "tray": {
     "icon-size": 16,

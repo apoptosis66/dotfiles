@@ -2,7 +2,7 @@
 
 yay -S --noconfirm --needed \
   brightnessctl \
-  pavucontrol \
+  wiremix \
   wireplumber \
   wl-clip-persist \
   clipse \
