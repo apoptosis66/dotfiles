@@ -15,7 +15,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
-config_path = Path.home() / Path(".config/themes2")
+config_path = Path.home() / Path(".config/themes")
 themes_path = config_path / Path("themes")
 templates_path = config_path / Path("templates")
 
