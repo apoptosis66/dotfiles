@@ -1,30 +1,6 @@
 {
-    "hypr": {
-        "src": "hypr.j2",
-        "out": "output/hypr.conf"
-    },
-    "mako": {
-        "src": "mako.j2",
-        "out": "output/mako.conf"
-    },
-    "waybar": {
-        "src": "waybar.j2",
-        "out": "output/waybar.css"
-    },
-    "wofi": {
-        "src": "wofi.j2",
-        "out": "output/wofi.css"
-    },
-    "ghostty": {
-        "src": "ghostty.j2",
-        "out": "output/ghostty.conf"
-    },
-    "nvim": {
-        "src": "nvim.j2",
-        "out": "output/nvim.lua"
-    },
     "btop": {
         "src": "btop.j2",
-        "out": "output/btop.conf"
+        "out": "~/.config/btop/themes/current.theme"
     }
 }

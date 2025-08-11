@@ -72,7 +72,7 @@ def render_templates_from_theme(theme_name, templates_name):
                 continue
 
             # Ensure the output directory exists
-            out_path = Path(out_path)
+            out_path = Path(out_path).expanduser()
             if not out_path.parent.is_dir():
                 print(
                     f"Skipping template '{template_name}' output directory '{out_path.parent.resolve()}' does not exist."
