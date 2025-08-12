@@ -4,7 +4,7 @@
     "font_family": "JetBrainsMonoNL Nerd Font Mono",
     "font_size": "14",
     "ghostty_theme": "Everforest Dark - Hard",
-    "nvim_theme": "neanias/everforest-nvim",
+    "nvim_theme": "sainnhe/everforest",
     "nvim_colorscheme": "everforest",
     "background": "#1E2326",
     "foreground": "#F2EFDF",
