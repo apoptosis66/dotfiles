@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# https://forum.endeavouros.com/t/a-complete-idiots-guide-to-endeavour-os-maintenance-update-upgrade/25184/180
-
 # Check systemd failed services
 systemctl --failed
 
