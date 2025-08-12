@@ -9,7 +9,7 @@ systemctl --failed
 sudo journalctl -p 3 -xb
 
 # Update Arch Mirrors
-reflector --verbose -c US --protocol https --sort rate --latest 25 --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose -c US --protocol https --sort rate --latest 25 --save /etc/pacman.d/mirrorlist
 
 # Update System
 yay -Syyu
