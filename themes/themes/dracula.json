@@ -5,6 +5,7 @@
     "font_size": "14",
     "ghostty_theme": "Dracula",
     "nvim_theme": "Mofiqul/dracula.nvim",
+    "nvim_name": "dracula",
     "nvim_colorscheme": "dracula",
     "background": "#1E1F29",
     "foreground": "#E6E6E6",

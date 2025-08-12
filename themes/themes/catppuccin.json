@@ -5,6 +5,7 @@
     "font_size": "14",
     "ghostty_theme": "catppuccin-mocha",
     "nvim_theme": "catppuccin/nvim",
+    "nvim_name": "catppuccin",
     "nvim_colorscheme": "catppuccin-mocha",
     "background": "#1E1E2E",
     "foreground": "#CDD6F4",
