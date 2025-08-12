@@ -47,6 +47,10 @@
         },
         "vscode": {
             "src": "vscode.j2",
+            "out": "testing/vscode.txt"
+        },
+        "vscode_json": {
+            "src": "vscode_json.j2",
             "out": "testing/vscode.json"
         }
     }
