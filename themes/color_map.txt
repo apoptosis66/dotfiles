@@ -1,0 +1,27 @@
+"theme" = Name of Theme
+"wallpaper" = Path to Wallpaper used by hyprpaper and hyprlock would like to use for lightdm
+"font_family" = Font Family used mostly in hyprpaper
+"font_size" = Font Size used mostly in hyperpaper
+"ghostty_theme" = Ghostty  built in theme, beats to own drum
+"nvim_theme" = nvim theme pluggin name
+"nvim_name" = nvim theme pluggin name for setup not sure why this is different in some cases
+"nvim_colorscheme" = nvim theme pluggin  colorscheme, some themes have multiple color schemes
+"background" = Background Color used for terminal background
+"foreground" = Forground Color used for termianl text and text color everywhere
+"cursor" = Cursor color used for terminal cursor, I don't use  elsewhere really
+"color0": "#45475A",
+"color1": "#F38BA8",
+"color2": "#A6E3A1",
+"color3": "#F9E2AF",
+"color4": "#89B4FA",
+"color5": "#F5C2E7",
+"color6": "#94E2D5",
+"color7": "#A6ADC8",
+"color8" = Used for Selected usually lighter than background
+"color9" = Used for Errors usually a reddish color
+"color10" = Used for Success usually a greenish color
+"color11" = Used for Warnings usually a yellowish color
+"color12" = Prefered Color for active borders
+"color13": "#F2AEDE",
+"color14": "#6BD7CA",
+"color15": "#BAC2DE"
