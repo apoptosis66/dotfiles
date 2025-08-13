@@ -45,6 +45,10 @@
             "src": "btop.j2",
             "out": "testing/btop.conf"
         },
+        "gtk": { 
+            "src": "gtk.j2",
+            "out": "testing/gtk.css"
+        },
         "vscode": {
             "src": "vscode.j2",
             "out": "testing/vscode.txt"
