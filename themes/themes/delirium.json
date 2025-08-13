@@ -8,7 +8,7 @@
     "nvim_name": "github-theme",
     "nvim_colorscheme": "github_dark_high_contrast",
     "background": "#010101",
-    "foreground": "#3AABB9",
+    "foreground": "#BBBBBB",
     "cursor": "#EDEAE9",
     "color0": "#4F4F4F",
     "color1": "#FB6E60",
@@ -22,7 +22,7 @@
     "color9": "#F9B4AF",
     "color10": "#CAF9AA",
     "color11": "#F9FBCA",
-    "color12": "#5A4067",
+    "color12": "#3AABB9",
     "color13": "#F99BFB",
     "color14": "#DADCFB",
     "color15": "#F9FBFB"
