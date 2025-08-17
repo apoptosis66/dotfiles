@@ -12,7 +12,7 @@ sudo reflector --verbose -c US --protocol https --sort rate --latest 25 --save /
 # Update System
 yay -Syyu
 
- #Delete Pacman Cache
+# Delete Pacman Cache
 sudo pacman -Scc
 
 # Delete Yay Cache
