@@ -19,4 +19,5 @@ yay -S --noconfirm --needed \
   less \
   whois \
   plocate \
-  ghostty
+  ghostty \
+  zoxide

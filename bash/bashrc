@@ -90,3 +90,6 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 # Editor used by CLI
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
+
+# zoxide Config
+eval "$(zoxide init --cmd cd bash)"
