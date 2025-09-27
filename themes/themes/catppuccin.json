@@ -3,7 +3,7 @@
     "wallpaper": "~/.config/wallpaper/catppuccin.jpg",
     "font_family": "JetBrainsMonoNL Nerd Font Mono",
     "font_size": "14",
-    "ghostty_theme": "catppuccin-mocha",
+    "ghostty_theme": "Catppuccin Mocha",
     "nvim_theme": "catppuccin/nvim",
     "nvim_name": "catppuccin",
     "nvim_colorscheme": "catppuccin-mocha",
