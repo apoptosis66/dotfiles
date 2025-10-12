@@ -29,9 +29,9 @@
             "src": "waybar.j2",
             "out": "testing/waybar.css"
         },
-        "wofi": {
-            "src": "wofi.j2",
-            "out": "testing/wofi.css"
+        "rofi": {
+            "src": "rofi.j2",
+            "out": "testing/rofi.rasi"
         },
         "ghostty": {
             "src": "ghostty.j2",

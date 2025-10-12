@@ -7,7 +7,7 @@ THEMES_SCRIPT="$HOME/.config/themes/theme.py"
 # Show theme selection menu and apply changes
 show_theme_menu() {
   # Display theme selection menu
-  local selected_theme=$(uv run $THEMES_SCRIPT list | wofi --show dmenu --width 300 --height 225 -k /dev/null)
+  local selected_theme=$(uv run $THEMES_SCRIPT list | rofi -dmenu -p "Theme")
 
   # Exit if the selected theme is empty or the current theme
   if [[ -z "$selected_theme" || "$selected_theme" == $'\uf0a9'* ]]; then

@@ -10,7 +10,7 @@ cp -r ../ghostty ~/.config/
 cp -r ../hypr ~/.config/
 cp -r ../nvim ~/.config/
 cp -r ../waybar ~/.config/
-cp -r ../wofi ~/.config/
+cp -r ../rofi ~/.config/
 cp -r ../themes ~/.config/
 cp -r ../wallpaper ~/.config/
 

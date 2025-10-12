@@ -7,7 +7,7 @@ yay -S --noconfirm --needed \
   hypridle \
   hyprpaper \
   hyprland-qtutils \
-  wofi \
+  rofi \
   waybar \
   mako \
   grim \

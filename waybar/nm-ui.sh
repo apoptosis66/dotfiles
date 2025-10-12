@@ -2,13 +2,11 @@
 
 # This script provides network management functionality for Waybar.
 # It displays the current connection status and allows you to select
-# and activate network connections via a rofi/wofi menu.
+# and activate network connections via a rofi menu.
 
 # --- Configuration ---
 # Path to your preferred menu utility.
-# Uncomment the one you use. 'rofi' is common for X11, 'wofi' for Wayland.
-# ROFI_CMD="rofi -dmenu -i -p \"Network Connections\""
-WOFI_CMD='wofi --show dmenu -i -p "Network Connections"'
+MENU_CMD="rofi -dmenu -i -p \"Network Connections\""
 
 # --- Functions ---
 
@@ -71,10 +69,8 @@ display_menu() {
         exit 1
     fi
 
-    # Use the configured menu command (rofi or wofi) to let the user select a connection.
-    # The 'echo -e "$CONNECTIONS"' feeds the list of connections to rofi/wofi.
-    # 2>/dev/null: redirect stderr to /dev/null for rofi/wofi output
-    SELECTED_CONNECTION=$(echo -e "$CONNECTIONS" | eval $WOFI_CMD 2>/dev/null) # Change to $WOFI_CMD if using wofi
+    # Use the configured menu command to let the user select a connection.
+    SELECTED_CONNECTION=$(echo -e "$CONNECTIONS" | eval $MENU_CMD 2>/dev/null)
 
     # Check if a connection was selected (i.e., the user didn't just close the menu)
     if [[ -n "$SELECTED_CONNECTION" ]]; then
