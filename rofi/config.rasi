@@ -1,14 +1,12 @@
 // Rofi Configuration
-// Author: Binoy Manoj
-// GitHub: https://github.com/binoymanoj
 
 configuration {
     modi: "drun,run,filebrowser,window";
-    font: "JetBrainsMono Nerd Font 12";
-    terminal: "kitty";
+    font: "JetBrainsMono Nerd Font 14";
+    terminal: "ghostty";
     drun-display-format: "{icon} {name}";
     location: 0;
-    disable-history: false;
+    disable-history: true;
     hide-scrollbar: true;
     display-drun: " Apps";
     display-run: " Run";
