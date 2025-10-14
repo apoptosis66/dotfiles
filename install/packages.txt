@@ -6,7 +6,6 @@ brightnessctl
 brother-mfc-l2700dw
 brscan4
 btop
-clipse
 cups
 cups-filters
 cups-pdf
