@@ -76,7 +76,7 @@ unzip
 veracrypt
 visual-studio-code-bin
 vlc
-vlc-plugins-all
+vlc-plugin-ffmpeg
 waybar
 wget
 whois
