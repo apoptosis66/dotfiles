@@ -1,7 +1,7 @@
 {
     "theme": "nord",
     "wallpaper": "~/.config/wallpaper/nord.jpg",
-    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "font_family": "JetBrainsMonoNL Nerd Font",
     "font_size": "14",
     "ghostty_theme": "nord",
     "nvim_theme": "gbprod/nord.nvim",

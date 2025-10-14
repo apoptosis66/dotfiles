@@ -1,7 +1,7 @@
 {
     "theme": "everforest",
     "wallpaper": "~/.config/wallpaper/everforest.jpg",
-    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "font_family": "JetBrainsMonoNL Nerd Font",
     "font_size": "14",
     "ghostty_theme": "Everforest Dark - Hard",
     "nvim_theme": "sainnhe/everforest",

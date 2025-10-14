@@ -1,7 +1,7 @@
 {
     "theme": "tokyonight",
     "wallpaper": "~/.config/wallpaper/cyberpunk.jpg",
-    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "font_family": "JetBrainsMonoNL Nerd Font",
     "font_size": "14",
     "ghostty_theme": "tokyonight",
     "nvim_theme": "folke/tokyonight.nvim",

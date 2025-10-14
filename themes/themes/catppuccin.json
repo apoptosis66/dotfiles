@@ -1,7 +1,7 @@
 {
     "theme": "catppuccin",
     "wallpaper": "~/.config/wallpaper/mustang.png",
-    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "font_family": "JetBrainsMonoNL Nerd Font",
     "font_size": "14",
     "ghostty_theme": "Catppuccin Mocha",
     "nvim_theme": "catppuccin/nvim",

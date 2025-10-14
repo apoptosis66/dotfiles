@@ -1,7 +1,7 @@
 {
     "theme": "dracula",
     "wallpaper": "~/.config/wallpaper/spider-man.jpg",
-    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "font_family": "JetBrainsMonoNL Nerd Font",
     "font_size": "14",
     "ghostty_theme": "Dracula",
     "nvim_theme": "Mofiqul/dracula.nvim",

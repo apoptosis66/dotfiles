@@ -1,7 +1,7 @@
 {
     "theme": "delirium",
     "wallpaper": "~/.config/wallpaper/delirium.jpg",
-    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "font_family": "JetBrainsMonoNL Nerd Font",
     "font_size": "14",
     "ghostty_theme": "Builtin Pastel Dark",
     "nvim_theme": "projekt0n/github-nvim-theme",
