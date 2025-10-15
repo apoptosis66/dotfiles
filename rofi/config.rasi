@@ -39,3 +39,102 @@ configuration {
 }
 
 @theme "theme"
+
+window {
+    background-color: @bg-col;
+    border: 2px;
+    border-color: @border-col;
+    border-radius: 0px;
+}
+
+mainbox {
+    background-color: @bg-col; 
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0px 5px 0px 0px;
+}
+
+prompt {
+    background-color: @prompt-col;
+    padding: 10px;
+    text-color: @bg-col;
+    border-radius: 5px;
+    margin: 5px 0px 0px 5px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 10px;
+    margin: 5px 0px 0px 5px;
+    text-color: @fg-col;
+    background-color: @bg-col-light;
+    border-radius: 5px;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 5px 5px 5px;
+    columns: 1;
+    lines: 8;
+    background-color: @bg-col;
+}
+
+element {
+    padding: 8px;
+    background-color: @bg-col;
+    border-radius: 5px;
+    text-color: @fg-col;
+}
+
+element-icon {
+    size: 32px;
+    padding: 0px 10px 0px 0px;
+    background-color: @bg-col;
+}
+
+element-text {
+    background-color: @bg-col;
+    text-color: @fg-col;
+    vertical-align: 0.5;
+}
+
+element selected {
+    background-color: @selected-col;
+    text-color: @text-col;
+}
+
+element-text selected {
+    text-color: @text-col;
+    background-color: @selected-col;
+}
+
+element-icon selected {
+    background-color: @selected-col;
+}
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @fg-col;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+button selected {
+    background-color: @bg-col;
+    text-color: @text-col;
+}
