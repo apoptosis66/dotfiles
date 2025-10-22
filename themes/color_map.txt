@@ -1,11 +1,5 @@
 "theme" = Name of Theme
 "wallpaper" = Path to Wallpaper used by hyprpaper and hyprlock would like to use for lightdm
-"font_family" = Font Family used mostly in hyprpaper
-"font_size" = Font Size used mostly in hyperpaper
-"ghostty_theme" = Ghostty  built in theme, beats to own drum
-"nvim_theme" = nvim theme pluggin name
-"nvim_name" = nvim theme pluggin name for setup not sure why this is different in some cases
-"nvim_colorscheme" = nvim theme pluggin  colorscheme, some themes have multiple color schemes
 "background" = Background Color used for terminal background
 "foreground" = Forground Color used for termianl text and text color everywhere
 "cursor" = Cursor color used for terminal cursor, I don't use  elsewhere really

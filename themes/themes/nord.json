@@ -1,12 +1,6 @@
 {
     "theme": "nord",
     "wallpaper": "~/.config/wallpaper/nord.jpg",
-    "font_family": "JetBrainsMonoNL Nerd Font",
-    "font_size": "14",
-    "ghostty_theme": "nord",
-    "nvim_theme": "gbprod/nord.nvim",
-    "nvim_name": "nord",
-    "nvim_colorscheme": "nord",
     "background": "#2E3440",
     "foreground": "#D8DEE9",
     "cursor": "#ECEFF4",

@@ -39,7 +39,7 @@
         },
         "nvim": {
             "src": "nvim.j2",
-            "out": "testing/nvim.lua"
+            "out": "testing/nvim.vim"
         },
         "btop": {
             "src": "btop.j2",

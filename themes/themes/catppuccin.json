@@ -1,12 +1,6 @@
 {
     "theme": "catppuccin",
     "wallpaper": "~/.config/wallpaper/mustang.png",
-    "font_family": "JetBrainsMonoNL Nerd Font",
-    "font_size": "14",
-    "ghostty_theme": "Catppuccin Mocha",
-    "nvim_theme": "catppuccin/nvim",
-    "nvim_name": "catppuccin",
-    "nvim_colorscheme": "catppuccin-mocha",
     "background": "#1E1E2E",
     "foreground": "#CDD6F4",
     "cursor": "#F5E0DC",

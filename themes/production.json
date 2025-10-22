@@ -7,7 +7,7 @@
         },
         "hyprpaper": {
             "src": "hyprpaper.j2",
-            "out": "~/.config/hypr//hyprpaper.conf"
+            "out": "~/.config/hypr/hyprpaper.conf"
         },
         "mako": {
             "src": "mako.j2",
@@ -27,7 +27,7 @@
         },
         "nvim": {
             "src": "nvim.j2",
-            "out": "~/.config/nvim/lua/plugins/theme.lua"
+            "out": "~/.config/nvim/theme.vim"
         },
         "btop": {
             "src": "btop.j2",
