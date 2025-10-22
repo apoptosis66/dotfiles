@@ -25,7 +25,19 @@ wall_selection=$(find "${wall_dir}"  -maxdepth 1  -type f \( -iname "*.jpg" -o -
 
 # Set the wallpaper
 [[ -n "$wall_selection" ]] || exit 1
+
+# Run Wallust
+wallust -q run "${wall_dir}/${wall_selection}"
+
+# Restart for new theme
+pkill waybar
+makoctl reload
+hyprctl reload
 hyprctl hyprpaper reload , "${wall_dir}/${wall_selection}"
+hyprctl dispatch exec waybar
+
+# Notify of the new theme
+notify-send "Wallpaper changed to ${wall_selection}" -t 5000
 
 exit 0
 
