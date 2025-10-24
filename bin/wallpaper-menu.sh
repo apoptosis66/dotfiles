@@ -27,7 +27,7 @@ wall_selection=$(find "${wall_dir}"  -maxdepth 1  -type f \( -iname "*.jpg" -o -
 [[ -n "$wall_selection" ]] || exit 1
 
 # Run Wallust
-wallust -q run "${wall_dir}/${wall_selection}"
+wallust -q -n run "${wall_dir}/${wall_selection}"
 
 # Restart for new theme
 pkill waybar
