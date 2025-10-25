@@ -49,6 +49,7 @@ libva-nvidia-driver
 linux-headers
 mako
 man
+mpv
 nemo
 neovim
 networkmanager
@@ -75,8 +76,6 @@ ufw
 unzip
 veracrypt
 visual-studio-code-bin
-vlc
-vlc-plugin-ffmpeg
 waybar
 wget
 whois
