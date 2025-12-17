@@ -8,6 +8,9 @@
 # Usage: uv run theme.py -t <theme_name>
 # This script reads a JSON configuration file, then uses the data to render
 # a list of Jinja2 templates and save the output to specified files.
+# Source of Themes:
+# https://github.com/Gogh-Co/Gogh/tree/50b3da841801eef270522274b578fc4ee57fd4e3/data/json
+# https://gogh-co.github.io/Gogh/
 
 import argparse
 import json
@@ -46,7 +49,9 @@ def list_themes(config_name):
     config_file_path = config_path / f"{config_name}.json"
 
     if not config_file_path.is_file():
-        vprint(f"Error: The templetes configuration file '{config_file_path}' was not found.")
+        vprint(
+            f"Error: The templetes configuration file '{config_file_path}' was not found."
+        )
         return
 
     if not themes_path.is_dir():
@@ -90,11 +95,15 @@ def apply_theme(theme_name, config_name, show_wallpaper):
 
     # Check files exist
     if not theme_file_path.is_file():
-        vprint(f"Error: The theme configuration file '{theme_file_path}' was not found.")
+        vprint(
+            f"Error: The theme configuration file '{theme_file_path}' was not found."
+        )
         return
 
     if not config_file_path.is_file():
-        vprint(f"Error: The templetes configuration file '{config_file_path}' was not found.")
+        vprint(
+            f"Error: The templetes configuration file '{config_file_path}' was not found."
+        )
         return
 
     try:
@@ -118,7 +127,11 @@ def apply_theme(theme_name, config_name, show_wallpaper):
             return
 
         # Set up the Jinja2 environment to load templates from the specified directory
-        env = Environment(loader=FileSystemLoader(templates_path), trim_blocks=True, lstrip_blocks=True)
+        env = Environment(
+            loader=FileSystemLoader(templates_path),
+            trim_blocks=True,
+            lstrip_blocks=True,
+        )
 
         # Register custom filters
         env.filters["strip"] = strip_filter
@@ -129,7 +142,9 @@ def apply_theme(theme_name, config_name, show_wallpaper):
             out_path = paths.get("out")
 
             if not src_path or not out_path:
-                vprint(f"Skipping template '{template_name}' due to missing 'src' or 'out' path.")
+                vprint(
+                    f"Skipping template '{template_name}' due to missing 'src' or 'out' path."
+                )
                 continue
 
             # Ensure the output directory exists
@@ -173,7 +188,9 @@ def apply_theme(theme_name, config_name, show_wallpaper):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="A command-line tool for managing themes.")
+    parser = argparse.ArgumentParser(
+        description="A command-line tool for managing themes."
+    )
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
 
     list_parser = subparsers.add_parser("list", help="List all available themes.")
@@ -184,9 +201,13 @@ def main():
         default=DEFAULT_CONFIG,
         help="Specify a config json to use with the theme.",
     )
-    list_parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output.")
+    list_parser.add_argument(
+        "-v", "--verbose", action="store_true", help="Enable verbose output."
+    )
 
-    theme_parser = subparsers.add_parser("theme", help="Apply a theme with optional settings.")
+    theme_parser = subparsers.add_parser(
+        "theme", help="Apply a theme with optional settings."
+    )
     theme_parser.add_argument("theme_name", help="The name of the theme to apply.")
     theme_parser.add_argument(
         "-c",
@@ -195,8 +216,12 @@ def main():
         default=DEFAULT_CONFIG,
         help="Specify a config json to use with the theme.",
     )
-    theme_parser.add_argument("-w", "--wallpaper", action="store_true", help="Enable wallpaper output.")
-    theme_parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output.")
+    theme_parser.add_argument(
+        "-w", "--wallpaper", action="store_true", help="Enable wallpaper output."
+    )
+    theme_parser.add_argument(
+        "-v", "--verbose", action="store_true", help="Enable verbose output."
+    )
 
     # No Args
     if len(sys.argv) == 1:
