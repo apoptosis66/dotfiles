@@ -33,7 +33,7 @@ wallust -q -n run "${wall_dir}/${wall_selection}"
 pkill waybar
 makoctl reload
 hyprctl reload
-hyprctl hyprpaper reload , "${wall_dir}/${wall_selection}"
+hyprctl hyprpaper wallpaper , ${wall_dir}/${wall_selection}, cover
 hyprctl dispatch exec waybar
 
 # Notify of the new theme

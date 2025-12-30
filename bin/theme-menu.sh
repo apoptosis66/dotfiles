@@ -25,7 +25,7 @@ show_theme_menu() {
   pkill waybar
   makoctl reload
   hyprctl reload
-  hyprctl hyprpaper reload , "$wallpaper"
+  hyprctl hyprpaper wallpaper , $wallpaper, cover
   hyprctl dispatch exec waybar
 
   # Notify of the new theme
