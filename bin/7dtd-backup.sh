@@ -1,9 +1,13 @@
 #!/bin/bash
 
 # Source directory
-source_dir="$HOME/.local/share/7DaysToDie/"
+# Proton
+source_dir="$HOME/.local/share/Steam/steamapps/compatdata/251570/pfx/drive_c/users/steamuser/AppData/Roaming/7DaysToDie/"
+# Linux Native
+# source_dir="$HOME/.local/share/7DaysToDie/"
 source_folder1="Saves"
 source_folder2="LocalPrefabs"
+source_folder3="GeneratedWorlds"
 
 # Backup directory
 backup_dir="$HOME/7dtd/"
@@ -24,10 +28,12 @@ fi
 timestamp=$(date +%Y-%m-%d-%H-%M-%S)
 backup_name1="$backup_dir/$timestamp"_"$source_folder1"
 backup_name2="$backup_dir/$timestamp"_"$source_folder2"
+backup_name3="$backup_dir/$timestamp"_"$source_folder3"
 
 # Create the backup (using rsync for efficient copying)
 rsync -ah "$source_dir$source_folder1/" "$backup_name1"
 rsync -ah "$source_dir$source_folder2/" "$backup_name2"
+rsync -ah "$source_dir$source_folder3/" "$backup_name3"
 
 if [ $? -eq 0 ]; then # Check if rsync was successful.
     echo "Backup created: $backup_name1"
@@ -39,6 +45,7 @@ fi
 # Keep only the last 10 backups
 find "$backup_dir" -maxdepth 1 -type d -name "*_$source_folder1" | sort -r | tail -n +6 | xargs rm -rf
 find "$backup_dir" -maxdepth 1 -type d -name "*_$source_folder2" | sort -r | tail -n +6 | xargs rm -rf
+find "$backup_dir" -maxdepth 1 -type d -name "*_$source_folder3" | sort -r | tail -n +6 | xargs rm -rf
 
 if [ $? -eq 0 ]; then # Check if cleanup was successful.
     echo "Old backups removed."
