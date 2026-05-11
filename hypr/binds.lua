@@ -11,38 +11,38 @@ local workspaces = 5
 local scripts = "~/bin/"
 
 -- Start apps
-h1.bind("SUPER + return", h1.dsp.exec_cmd(terminal))
-h1.bind("SUPER + B", h1.dsp.exec_cmd(browser))
-h1.bind("SUPER + I", h1.dsp.exec_cmd(browser .. " -private-window"))
-h1.bind("SUPER + D", h1.dsp.exec_cmd(development))
-h1.bind("SUPER + F", h1.dsp.exec_cmd(file_manager))
-h1.bind("SUPER + M", h1.dsp.exec_cmd(messenger))
-h1.bind("SUPER + K", h1.dsp.exec_cmd(password_manager))
-h1.bind("SUPER + N", h1.dsp.exec_cmd(terminal .. " -e nvim"))
-h1.bind("SUPER + T", h1.dsp.exec_cmd(terminal .. " -e btop"))
+hl.bind("SUPER + return", hl.dsp.exec_cmd(terminal))
+hl.bind("SUPER + B", hl.dsp.exec_cmd(browser))
+hl.bind("SUPER + I", hl.dsp.exec_cmd(browser .. " -private-window"))
+hl.bind("SUPER + D", hl.dsp.exec_cmd(development))
+hl.bind("SUPER + F", hl.dsp.exec_cmd(file_manager))
+hl.bind("SUPER + M", hl.dsp.exec_cmd(messenger))
+hl.bind("SUPER + K", hl.dsp.exec_cmd(password_manager))
+hl.bind("SUPER + N", hl.dsp.exec_cmd(terminal .. " -e nvim"))
+hl.bind("SUPER + T", hl.dsp.exec_cmd(terminal .. " -e btop"))
 
 -- Urls
-h1.bind("SUPER + A", h1.dsp.exec_cmd(browser .. " https://gemini.google.com/"))
-h1.bind("SUPER + C", h1.dsp.exec_cmd(browser .. " https://calendar.google.com/"))
-h1.bind("SUPER + G", h1.dsp.exec_cmd(browser .. ' --new-tab --url "https://mail.google.com/" --new-tab --url "https://messages.google.com/"'))
-h1.bind("SUPER + Y", h1.dsp.exec_cmd(browser .. " https://youtube.com/"))
+hl.bind("SUPER + A", hl.dsp.exec_cmd(browser .. " https://gemini.google.com/"))
+hl.bind("SUPER + C", hl.dsp.exec_cmd(browser .. " https://calendar.google.com/"))
+hl.bind("SUPER + G", hl.dsp.exec_cmd(browser .. ' --new-tab --url "https://mail.google.com/" --new-tab --url "https://messages.google.com/"'))
+hl.bind("SUPER + Y", hl.dsp.exec_cmd(browser .. " https://youtube.com/"))
 
 -- Hyprland
-h1.bind("SUPER + SPACE", h1.dsp.exec_cmd('flock --nonblock /tmp/.rofi.lock -c "rofi -show drun -sort"'))
-h1.bind("SUPER + SHIFT + SPACE", h1.dsp.exec_cmd("pkill waybar && hyprctl dispatch exec waybar"))
-h1.bind("SUPER + CTRL + SPACE", h1.dsp.exec_cmd(scripts .. "theme-menu.sh"))
-h1.bind("SUPER + Q", h1.dsp.window.close())
-h1.bind("SUPER + SHIFT + Q", h1.dsp.window.kill())
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd('flock --nonblock /tmp/.rofi.lock -c "rofi -show drun -sort"'))
+hl.bind("SUPER + SHIFT + SPACE", hl.dsp.exec_cmd("pkill waybar && hyprctl dispatch exec waybar"))
+hl.bind("SUPER + CTRL + SPACE", hl.dsp.exec_cmd(scripts .. "theme-menu.sh"))
+hl.bind("SUPER + Q", hl.dsp.window.close())
+hl.bind("SUPER + SHIFT + Q", hl.dsp.window.kill())
 
 -- End active session
-h1.bind("SUPER + ESCAPE", h1.dsp.exec_cmd("hyprlock"))
-h1.bind("SUPER + SHIFT + ESCAPE", h1.dsp.exec_cmd("systemctl suspend"))
-h1.bind("SUPER + ALT + ESCAPE", h1.dsp.exit())
-h1.bind("SUPER + CTRL + ESCAPE", h1.dsp.exec_cmd("reboot"))
-h1.bind("SUPER + SHIFT + CTRL + ESCAPE", h1.dsp.exec_cmd("systemctl poweroff"))
+hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd("hyprlock"))
+hl.bind("SUPER + SHIFT + ESCAPE", hl.dsp.exec_cmd("systemctl suspend"))
+hl.bind("SUPER + ALT + ESCAPE", hl.dsp.exit())
+hl.bind("SUPER + CTRL + ESCAPE", hl.dsp.exec_cmd("reboot"))
+hl.bind("SUPER + SHIFT + CTRL + ESCAPE", hl.dsp.exec_cmd("systemctl poweroff"))
 
 -- Control tiling
-h1.bind("SUPER + J", h1.dsp.layout("togglesplit"))
+hl.bind("SUPER + J", hl.dsp.layout("togglesplit"))
 
 -- Switch workspaces: SUPER + [1-workspaces]
 -- Move active window to workspace: SUPER + SHIFT [1-workspaces]
@@ -78,12 +78,12 @@ hl.bind("SUPER + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Screenshots
-h1.bind("code:191", h1.dsp.exec_cmd(scripts .. "hyprshot.sh -m region"))
-h1.bind("SHIFT + code:191", h1.dsp.exec_cmd(scripts .. "hyprshot.sh -m window"))
-h1.bind("CTRL + code:191", h1.dsp.exec_cmd(scripts .. "hyprshot.sh -m output"))
+hl.bind("code:191", hl.dsp.exec_cmd(scripts .. "hyprshot.sh -m region"))
+hl.bind("SHIFT + code:191", hl.dsp.exec_cmd(scripts .. "hyprshot.sh -m window"))
+hl.bind("CTRL + code:191", hl.dsp.exec_cmd(scripts .. "hyprshot.sh -m output"))
 
 -- Color picker
-h1.bind("SUPER + code:191", h1.dsp.exec_cmd("hyprpicker -a"))
+hl.bind("SUPER + code:191", hl.dsp.exec_cmd("hyprpicker -a"))
 
 -- Misc laptop / function key binds
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
