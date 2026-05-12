@@ -29,7 +29,7 @@ hl.bind("SUPER + Y", hl.dsp.exec_cmd(browser .. " https://youtube.com/"))
 
 -- Hyprland
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd('flock --nonblock /tmp/.rofi.lock -c "rofi -show drun -sort"'))
-hl.bind("SUPER + SHIFT + SPACE", hl.dsp.exec_cmd("pkill waybar && hyprctl dispatch exec waybar"))
+hl.bind("SUPER + SHIFT + SPACE", hl.dsp.exec_cmd("pkill waybar && hyprctl eval 'hl.exec_cmd(\"waybar\")'"))
 hl.bind("SUPER + CTRL + SPACE", hl.dsp.exec_cmd(scripts .. "theme-menu.sh"))
 hl.bind("SUPER + Q", hl.dsp.window.close())
 hl.bind("SUPER + SHIFT + Q", hl.dsp.window.kill())

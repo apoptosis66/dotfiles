@@ -26,7 +26,7 @@ show_theme_menu() {
   makoctl reload
   hyprctl reload
   hyprctl hyprpaper wallpaper , $wallpaper, cover
-  hyprctl dispatch exec waybar
+  hyprctl eval 'hl.exec_cmd("waybar")'
 
   # Notify of the new theme
   notify-send "Theme changed to $selected_theme" -t 5000

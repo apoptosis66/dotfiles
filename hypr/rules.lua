@@ -3,8 +3,8 @@
 -- Suppress Maximize Events
 hl.window_rule({ match = { class = ".*" }, suppress_event = "maximize" })
 
--- Just dash of opacity by default
-hl.window_rule({ match = { tag = "default-opacity" }, opacity = "1.0 0.97" })
+-- Just a dash of opacity by default
+hl.window_rule({ match = { class = ".*" }, opacity = "1.0 0.97" })
 
 -- Fix some dragging issues with XWayland.
 hl.window_rule({
@@ -22,7 +22,6 @@ hl.window_rule({
 -- Float Steam.
 hl.window_rule({ match = { class = "steam" }, float = true })
 hl.window_rule({ match = { class = "steam", title = "Steam" }, center = true })
-hl.window_rule({ match = { class = "steam.*" }, tag = "-default-opacity" })
 hl.window_rule({ match = { class = "steam.*" }, opacity = "1 1" })
 hl.window_rule({ match = { class = "steam", title = "Steam" }, size = { 1100, 700 } })
 hl.window_rule({ match = { class = "steam", title = "Friends List" }, size = { 460, 800 } })
