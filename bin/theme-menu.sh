@@ -2,7 +2,7 @@
 
 # Theme menu
 # Provides an interactive dmenu to switch between available themes
-THEMES_SCRIPT="$HOME/.config/themes/theme.py"
+THEMES_SCRIPT="$HOME/bin/theme.py"
 
 # Show theme selection menu and apply changes
 show_theme_menu() {

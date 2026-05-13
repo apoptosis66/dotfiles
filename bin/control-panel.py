@@ -368,10 +368,8 @@ class ControlPanel(Gtk.Window):
 
     def setup_theme_list(self):
         try:
-            home = os.path.expanduser("~")
-            themes_script = f"{home}/.config/themes/theme.py"
             output = subprocess.check_output(
-                f"uv run {themes_script} list", shell=True, text=True
+                "uv run ~/bin/theme.py list", shell=True, text=True
             )
             themes = [line.strip() for line in output.splitlines() if line.strip()]
 
@@ -531,8 +529,7 @@ class ControlPanel(Gtk.Window):
 
             home = os.path.expanduser("~")
             script = f"""
-            THEMES_SCRIPT="{home}/.config/themes/theme.py"
-            wallpaper=$(uv run $THEMES_SCRIPT theme "{theme}" -w)
+            wallpaper=$(uv run ~/bin/theme.py theme "{theme}" -w)
             touch "{home}/.config/ghostty/config"
             pkill waybar
             makoctl reload
