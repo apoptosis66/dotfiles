@@ -23,7 +23,7 @@ from gi.repository import Gdk, Gio, GLib, Gtk, GtkLayerShell
 
 
 class ControlPanel(Gtk.Window):
-    def __init__(self):
+    def __init__(self, initial_mode="apps"):
         super().__init__()
         # Configure as an overlay layer shell window
         GtkLayerShell.init_for_window(self)
@@ -159,7 +159,15 @@ class ControlPanel(Gtk.Window):
 
         self.stack.add_named(self.system_box, "system")
 
-        self.refresh_list()
+        if initial_mode == "themes":
+            self.btn_themes.set_active(True)
+        elif initial_mode == "network":
+            self.btn_network.set_active(True)
+        elif initial_mode == "system":
+            self.btn_system.set_active(True)
+        else:
+            self.refresh_list()
+            self.search.grab_focus()
 
         # Workspace Switcher
         ws_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=6)
@@ -299,6 +307,7 @@ class ControlPanel(Gtk.Window):
                 self.stack.set_visible_child_name("apps")
                 self.search.set_text("")
                 self.refresh_list()
+                self.search.grab_focus()
 
     def refresh_list(self):
         for child in self.listbox.get_children():
@@ -563,7 +572,17 @@ class ControlPanel(Gtk.Window):
 
 
 if __name__ == "__main__":
-    panel = ControlPanel()
+    initial_mode = "apps"
+    if len(sys.argv) > 1:
+        arg = sys.argv[1].lower()
+        if arg == "themes":
+            initial_mode = "themes"
+        elif arg == "network":
+            initial_mode = "network"
+        elif arg == "system":
+            initial_mode = "system"
+
+    panel = ControlPanel(initial_mode)
     panel.show_all()
     Gtk.main()
     sys.exit(0)

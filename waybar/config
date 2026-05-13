@@ -84,15 +84,15 @@
   "custom/arch": {
     "format": " 󰣇 ",
     "tooltip-format": "Arch BTW",
-    "on-click": "~/bin/theme-menu.sh",
+    "on-click": "uv run ~/bin/control-panel.py themes",
     "on-click-right": ""
   },
   "custom/network-manager": {
     "format": "{text}",
     "interval": 5,
     "return-type": "json",
-    "exec": "~/.config/waybar/nm-ui.sh status",
-    "on-click": "~/.config/waybar/nm-ui.sh menu",
+    "exec": "~/bin/nm-ui.sh status",
+    "on-click": "uv run ~/bin/control-panel.py network",
     "tooltip": true
   }
 }
