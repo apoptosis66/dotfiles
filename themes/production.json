@@ -1,10 +1,6 @@
 {
-    "current_theme": "catppuccin",
+    "current_theme": "catppuccin-mocha",
     "templates": {
-        "css": {
-            "src": "css.j2",
-            "out": "~/.config/themes/theme.css"
-        },
         "hypr": {
             "src": "hypr.j2",
             "out": "~/.config/hypr/theme.conf"
@@ -36,6 +32,10 @@
         "btop": {
             "src": "btop.j2",
             "out": "~/.config/btop/themes/current.theme"
+        },
+        "control-panel": {
+            "src": "control-panel.j2",
+            "out": "~/.config/themes/control-panel.css"
         }
     }
 }

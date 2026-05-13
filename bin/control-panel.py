@@ -36,6 +36,9 @@ class ControlPanel(Gtk.Window):
 
         self.set_size_request(600, 500)
 
+        self.set_name("control-panel")
+        self.load_css()
+
         # UI Layout
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
         box.set_margin_start(20)
@@ -118,14 +121,13 @@ class ControlPanel(Gtk.Window):
         # System Tab Contents
         self.system_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=15)
 
-        temp_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        temp_title = Gtk.Label(label="SYSTEM RESOURCES")
-        temp_title.set_halign(Gtk.Align.START)
-        temp_box.pack_start(temp_title, True, True, 0)
-
-        self.temp_lbl = Gtk.Label()
-        self.temp_lbl.set_halign(Gtk.Align.END)
-        temp_box.pack_start(self.temp_lbl, True, True, 0)
+        # Temp
+        temp_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=5)
+        self.temp_lbl = Gtk.Label(label="TEMP:")
+        self.temp_lbl.set_halign(Gtk.Align.START)
+        temp_box.pack_start(self.temp_lbl, False, False, 0)
+        self.temp_prog = Gtk.Label(label="N/A")
+        temp_box.pack_start(self.temp_prog, False, False, 0)
         self.system_box.pack_start(temp_box, False, False, 0)
 
         # CPU
@@ -147,7 +149,7 @@ class ControlPanel(Gtk.Window):
         self.system_box.pack_start(ram_box, False, False, 0)
 
         # Volume
-        vol_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=2)
+        vol_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         vol_lbl = Gtk.Label(label="VOLUME")
         vol_lbl.set_halign(Gtk.Align.START)
         vol_box.pack_start(vol_lbl, False, False, 0)
@@ -164,6 +166,8 @@ class ControlPanel(Gtk.Window):
         elif initial_mode == "network":
             self.btn_network.set_active(True)
         elif initial_mode == "system":
+            # Explicitly set the stack to the system view during initialization
+            self.stack.set_visible_child_name("system")
             self.btn_system.set_active(True)
         else:
             self.refresh_list()
@@ -247,11 +251,11 @@ class ControlPanel(Gtk.Window):
         try:
             temps = psutil.sensors_temperatures()
             core_temp = temps.get("coretemp", temps.get("cpu_thermal", []))[0].current
-            self.temp_lbl.set_markup(
-                f"<span color='#52fa69' weight='bold'>󰔏 {int(core_temp)}°C</span>"
+            self.temp_prog.set_markup(
+                f"<span color='#52fa69' weight='bold'>{int(core_temp)}°C</span>"
             )
         except:
-            self.temp_lbl.set_markup("<span color='#52fa69' weight='bold'>󰔏 N/A</span>")
+            self.temp_prog.set_markup("<span color='#52fa69' weight='bold'>N/A</span>")
 
         # Sync volume slider with system
         current_vol = self.get_current_volume()
@@ -566,6 +570,23 @@ class ControlPanel(Gtk.Window):
             Gtk.main_quit()
             return True
         return False
+
+    def load_css(self):
+        panel_css = ""
+        theme_css_path = os.path.expanduser("~/.config/themes/control-panel.css")
+        if os.path.exists(theme_css_path):
+            with open(theme_css_path, "r") as f:
+                panel_css += f.read()
+        else:
+            print(f"Warning: theme CSS not found at {theme_css_path}", file=sys.stderr)
+
+        css_provider = Gtk.CssProvider()
+        css_provider.load_from_data(panel_css)
+
+        screen = Gdk.Screen.get_default()
+        Gtk.StyleContext.add_provider_for_screen(
+            screen, css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
+        )
 
 
 if __name__ == "__main__":

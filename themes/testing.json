@@ -1,5 +1,5 @@
 {
-    "current_theme": "catppuccin",
+    "current_theme": "catppuccin-mocha",
     "templates": {
         "text": {
             "src": "text.j2",
