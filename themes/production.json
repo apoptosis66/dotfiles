@@ -1,6 +1,10 @@
 {
     "current_theme": "catppuccin",
     "templates": {
+        "css": {
+            "src": "css.j2",
+            "out": "~/.config/themes/theme.css"
+        },
         "hypr": {
             "src": "hypr.j2",
             "out": "~/.config/hypr/theme.conf"
