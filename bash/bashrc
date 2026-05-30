@@ -46,8 +46,8 @@ open() {
 }
 
 # Compression
-compress() { 
-    tar -czf "${1%/}.tar.gz" "${1%/}"; 
+compress() {
+    tar -czf "${1%/}.tar.gz" "${1%/}";
 }
 
 # Write iso file to sd card
@@ -88,7 +88,8 @@ fi
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Editor used by CLI
-export EDITOR="nvim"
+export EDITOR="zeditor --wait"
+export VISUAL="$EDITOR"
 export SUDO_EDITOR="$EDITOR"
 
 # zoxide Config
