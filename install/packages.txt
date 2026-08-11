@@ -53,6 +53,7 @@ mpv
 nemo
 neovim
 networkmanager
+noctalia
 nvidia-dkms
 nvidia-utils
 plocate
@@ -62,7 +63,6 @@ qbittorrent
 qt5-wayland
 qt6-wayland
 ripgrep
-rofi
 rust
 signal-desktop
 simple-scan
@@ -76,7 +76,6 @@ ufw
 unzip
 veracrypt
 visual-studio-code-bin
-waybar
 wget
 whois
 wiremix
