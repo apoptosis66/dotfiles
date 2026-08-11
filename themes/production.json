@@ -13,14 +13,6 @@
             "src": "mako.j2",
             "out": "~/.config/mako/config"
         },
-        "waybar": {
-            "src": "waybar.j2",
-            "out": "~/.config/waybar/theme.css"
-        },
-        "rofi": {
-            "src": "rofi.j2",
-            "out": "~/.config/rofi/themes/theme.rasi"
-        },
         "ghostty": {
             "src": "ghostty.j2",
             "out": "~/.config/ghostty/theme.conf"

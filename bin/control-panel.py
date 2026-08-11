@@ -535,11 +535,9 @@ class ControlPanel(Gtk.Window):
             script = f"""
             wallpaper=$(uv run ~/bin/theme.py theme "{theme}" -w)
             touch "{home}/.config/ghostty/config"
-            pkill waybar
             makoctl reload
             hyprctl reload
             hyprctl hyprpaper wallpaper , $wallpaper, cover
-            hyprctl eval 'hl.exec_cmd("waybar")'
             notify-send "Theme changed to {theme}" -t 5000
             """
             self.run_cmd(script)

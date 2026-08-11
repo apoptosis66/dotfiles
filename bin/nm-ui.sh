@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script provides network management functionality for Waybar.
+# This script provides network management functionality.
 # It displays the current connection status and allows you to select
 # and activate network connections via a rofi menu.
 
@@ -10,7 +10,7 @@ MENU_CMD="rofi -dmenu -i -p \"Network Connections\""
 
 # --- Functions ---
 
-# Function to get the current network status for Waybar display.
+# Function to get the current network status for display.
 # It outputs a JSON string with 'text' for the bar and 'tooltip' for hover.
 get_status() {
     # Initialize variables for active connections
@@ -88,7 +88,7 @@ display_menu() {
 }
 
 # --- Main Script Logic ---
-# This 'case' statement handles the arguments passed to the script from Waybar.
+# This 'case' statement handles the arguments passed to the script.
 case "$1" in
     status)
         # If the argument is 'status', call the get_status function.
