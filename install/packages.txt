@@ -27,11 +27,8 @@ gnome-themes-extra
 grim
 gum
 gvfs
-hypridle
 hyprland
 hyprland-qtutils
-hyprlock
-hyprpaper
 hyprpicker
 imagemagick
 inetutils
@@ -79,7 +76,6 @@ wget
 whois
 wiremix
 wireplumber
-wl-clip-persist
 wl-clipboard
 woff2-font-awesome
 xdg-desktop-portal-gtk
