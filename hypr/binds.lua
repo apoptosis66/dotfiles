@@ -36,11 +36,11 @@ hl.bind("SUPER + Q", hl.dsp.window.close())
 hl.bind("SUPER + SHIFT + Q", hl.dsp.window.kill())
 
 -- End active session
-hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd("hyprlock"))
-hl.bind("SUPER + SHIFT + ESCAPE", hl.dsp.exec_cmd("systemctl suspend"))
+hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd("noctalia msg session lock"))
+hl.bind("SUPER + SHIFT + ESCAPE", hl.dsp.exec_cmd("noctalia msg session lock-and-suspend"))
 hl.bind("SUPER + ALT + ESCAPE", hl.dsp.exit())
-hl.bind("SUPER + CTRL + ESCAPE", hl.dsp.exec_cmd("reboot"))
-hl.bind("SUPER + SHIFT + CTRL + ESCAPE", hl.dsp.exec_cmd("systemctl poweroff"))
+hl.bind("SUPER + CTRL + ESCAPE", hl.dsp.exec_cmd("noctalia msg session reboot"))
+hl.bind("SUPER + SHIFT + CTRL + ESCAPE", hl.dsp.exec_cmd("noctalia msg session shutdown"))
 
 -- Control tiling
 hl.bind("SUPER + J", hl.dsp.layout("togglesplit"))

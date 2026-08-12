@@ -47,7 +47,6 @@ lib32-nvidia-utils
 libreoffice
 libva-nvidia-driver
 linux-headers
-mako
 man
 mpv
 nemo
