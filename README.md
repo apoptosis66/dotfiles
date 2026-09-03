@@ -9,4 +9,4 @@ Feel free to fork and make it your own.
 Hyperdesk is released under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## ToDo
-
+- Convert from lightdm to greetd/nnoctalia greeter???
