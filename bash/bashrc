@@ -91,7 +91,6 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export EDITOR="zeditor --wait"
 export VISUAL="$EDITOR"
 export SUDO_EDITOR="$EDITOR"
-export STEAM_FRAME_FORCE_CLOSE=1
 
 # zoxide Config
 eval "$(zoxide init --cmd cd bash)"

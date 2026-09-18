@@ -36,3 +36,7 @@ hl.env("QT_STYLE_OVERRIDE","kvantum")
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATIONS","1")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
+
+-- Apps
+hl.env("STEAM_FRAME_FORCE_CLOSE", "1")
+hl.env("LOCAL_NOTEBOOK_DEV", "1")
