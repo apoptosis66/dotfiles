@@ -3,7 +3,7 @@
 -- Config
 local terminal = "ghostty"
 local browser = "firefox --new-window"
-local development = "code"
+local development = "zeditor"
 local file_manager = "nemo"
 local messenger = "signal-desktop --password-store=gnome-libsecret --enable-features=UseOzonePlatform --ozone-platform=wayland"
 local password_manager = "keepassxc"
